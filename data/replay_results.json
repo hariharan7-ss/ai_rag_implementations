@@ -1,0 +1,119 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "samples_per_prompt": 8,
+  "tallies": {
+    "q5_before": {
+      "answer": 4,
+      "refuse": 4
+    },
+    "q5_after": {
+      "answer": 7,
+      "refuse": 1
+    },
+    "q14_before": {
+      "16 weeks": 7,
+      "refuse": 1
+    },
+    "q14_after": {
+      "20 weeks": 5,
+      "refuse": 3
+    },
+    "q18_before": {
+      "answer": 7,
+      "refuse": 1
+    },
+    "q18_after": {
+      "answer": 7,
+      "refuse": 1
+    },
+    "q20_before": {
+      "no": 5,
+      "refuse": 3
+    },
+    "q20_after": {
+      "yes, $50 wellness": 8
+    }
+  },
+  "outputs": {
+    "q5_before": [
+      "To work from your home country for a month (which is more than 15 consecutive business days), you must follow the **“Working from Another Country”** clause in the policy:\n\n1. **Get Prior Written Approval**  \n   - Submit a written request to **People Operations** and **Legal** before you depart.  \n   - Explain the purpose (visiting family) and the exact dates you will be abroad.  \n   - Highlight that you will continue to meet all normal duties and will remain reachable.\n\n2. **Compliance with Security & Connectivity Requirements**  \n   - Use only a company‑issued laptop with disk encryption.  \n   - Connect via the company VPN; do **not** use open/public Wi‑Fi.  \n   - Maintain the required core‑hours (10:00‑15:00 local team time) and keep your managers, colleagues, and clients reachable by phone and instant messenger.\n\n3. **Payroll, Benefits & Tax Considerations**  \n   - The policy notes that unapproved extended work‑from‑abroad can affect payroll and benefits.  \n   - Your approval will also address any tax and employment‑law implications in the host country.\n\n4. **Other Practicalities**  \n   - Provide updated contact details and address to your manager/supervisor.  \n   - Keep the monthly internet stipend (25 USD) if you have an approved remote stint.  \n\nOnce you have the written approval, you may proceed with the trip. If you fail to obtain this approval, you risk penalties to payroll and benefits.",
+      "I cannot answer this based on the provided documents.",
+      "I cannot answer this based on the provided documents.",
+      "To work from your home country for a month (which is more than 15 consecutive business days), you’ll need to follow the company’s “Working from Another Country” policy:\n\n1. **Obtain Prior Written Approval**  \n   - Submit a request to **People Operations** and **Legal** as soon as possible.  \n   - Include your intended dates, purpose, and any relevant travel details.  \n   - Await formal written approval before you leave.\n\n2. **Compliance with Security & Connectivity Rules**  \n   - Use a company‑issued, disk‑encrypted laptop.  \n   - Connect through the company VPN at all times.  \n   - Avoid open/public Wi‑Fi; use a secure, reliable internet connection.  \n\n3. **Maintain Availability**  \n   - Be reachable during the core hours of 10:00 – 15:00 in your local team’s primary time zone (or as otherwise directed).  \n   - Respond promptly to calls, messages, and emails.\n\n4. **Payroll & Benefits Considerations**  \n   - Note that unapproved extended work‑from‑abroad can affect payroll, benefits, and tax compliance.  \n   - Make sure any necessary tax or employment‑law documents are completed if required.\n\nOnce you have the written approval, you can proceed with your trip. If you have any questions or need help drafting the request, let your manager or HR know.",
+      "To work from your home country for a month (≈ 30 days) you must:\n\n1. **Submit a written request** to **People Operations** (and to **Legal** if required) before the first day of your remote period.  \n2. In the request include:\n   * the exact dates you intend to work from abroad (more than 15 consecutive business days);\n   * the country you will be in;\n   * your contact details (phone, email, and instant‑messenger ID);\n   * a brief reason (e.g., visiting family) and any impact on your workload or availability.\n\n3. **Wait for written approval**. Unapproved extended work‑from‑abroad may affect your payroll, benefits, and tax compliance.\n\n4. While working remotely, be sure to:\n   * stay reachable during core hours (10:00‑15:00 local team time);\n   * use company‑issued equipment with disk encryption, connect via VPN, and avoid public Wi‑Fi;\n   * keep your manager updated and respond promptly to calls, emails, and inquiries.\n\nOnce you receive the approval, you can proceed with your month‑long stay. If you have any questions, contact your People Operations representative for guidance.",
+      "I cannot answer this based on the provided documents.",
+      "To work from a different country for a full month, you’ll need to:\n\n1. **Submit a formal request** to People Operations (and Legal) *before* you depart.  \n2. **Include**:  \n   * The exact dates you’ll be abroad.  \n   * The country and city where you’ll be working.  \n   * Your reason (e.g., visiting family).  \n3. **Await written approval** from People Ops and Legal.  \n4. **Confirm compliance** with the remote‑work security requirements (company‑issued laptop with disk‑encryption, VPN usage, no public Wi‑Fi).  \n5. **Maintain core‑time availability** (10:00‑15:00 local‑team time) and keep your manager and colleagues informed of any changes.  \n\nIf you fail to obtain the required approval, the arrangement could jeopardize payroll, benefits, or legal compliance.",
+      "I cannot answer this based on the provided documents."
+    ],
+    "q5_after": [
+      "To work from your home country for a month you’ll need to:\n\n1. **Obtain Prior Written Approval**  \n   - Submit a request to **People Operations** (and to **Legal** if required).  \n   - The request must be in writing and include the exact dates you plan to work abroad (more than 15 consecutive business days triggers the requirement).  \n   - Once approved, keep the approval note handy for your records.\n\n2. **Follow Security & Technical Requirements**  \n   - Use a company‑issued laptop with disk encryption enabled.  \n   - Connect to the company VPN whenever accessing internal systems; do not use public Wi‑Fi without the VPN active.  \n   - Make sure you can be reachable during your team’s core hours (10:00‑15:00 local time) unless you’re on approved PTO or sick leave.\n\n3. **Maintain Performance Standards**  \n   - Your remote location does not affect performance expectations. Managers will evaluate you against the same criteria as office‑based employees.\n\n4. **Keep Payroll/Benefits in Mind**  \n   - Unapproved extended work‑from‑abroad can impact payroll and benefits eligibility, so the written approval is essential.\n\nOnce you have the written approval from People Operations (and Legal if needed), you can proceed with your trip. If you need any additional guidance on the approval process, let me know!",
+      "To work from your home country for a month (which is more than 15 consecutive business days), you must:\n\n1. **Obtain prior written approval**  \n   - Submit a written request to **People Operations** and **Legal**.  \n   - The request should include the dates you intend to work abroad, the country you’ll be in, and a brief explanation of why the remote work is needed.\n\n2. **Follow security requirements**  \n   - Use a company‑issued laptop with disk encryption enabled.  \n   - Connect to the company VPN when accessing internal systems and avoid using public Wi‑Fi without VPN active.\n\n3. **Keep your manager informed**  \n   - Make sure your team lead and manager know your planned dates and that you’ll remain reachable during core hours (10:00–15:00 local team time).\n\nOnce you receive the written approval from People Operations and Legal, you can proceed with your work-from-abroad arrangement for the month.",
+      "You’ll need to obtain prior written approval from **People Operations and Legal** before you start working from your home country. Because a month (≈ 20 + business days) exceeds the 15‑day threshold in the policy, you must submit a formal request to the two departments, receive their written consent, and then follow the usual security requirements (company‑issued laptop with disk encryption, VPN use, no public Wi‑Fi without VPN). Unapproved extended work‑from‑abroad could affect your payroll and benefits.",
+      "To work from your home country for a full month you’ll need to follow the company’s **“Working from Another Country”** policy:\n\n1. **Get Prior Written Approval**  \n   - Submit a request to **People Operations** and **Legal** in writing before you leave.  \n   - The policy states that any remote work from a country other than your country of employment that lasts **more than 15 consecutive business days** requires this approval. A month (≈30 calendar days) qualifies.\n\n2. **Notify Your Manager**  \n   - Keep your immediate manager informed so they can adjust any scheduling or coverage needs.\n\n3. **Security Compliance**  \n   - Use only a company‑issued laptop with disk encryption enabled.  \n   - Connect via the company VPN whenever you access internal systems.  \n   - Do not work from public Wi‑Fi unless the VPN is active.\n\n4. **Payroll/Benefits Awareness**  \n   - The policy warns that unapproved extended work‑from‑abroad can affect payroll and benefits eligibility. Once you have approval, the normal payroll/benefits process applies.\n\n5. **Documentation**  \n   - Retain the written approval and any related correspondence for your records.\n\n**Bottom line:** Before you travel, send a formal written request to People Operations and Legal, wait for their approval, then follow the security requirements while you work remotely.",
+      "To work from your home country for a month, you’ll need to obtain **prior written approval** from People Operations and Legal.  \n- **Why:** Working from a foreign country for more than 15 consecutive business days triggers tax and employment‑law considerations that can affect payroll and benefits.  \n- **How to proceed:**  \n  1. Submit a formal request (via the company’s approval workflow or email) explaining the dates, purpose (visiting family), and the fact that you’ll be working remotely from a different country.  \n  2. Await the written confirmation from People Ops and Legal.  \n  3. While abroad, use your company‑issued laptop with disk encryption, connect through the company VPN for all internal access, and avoid public Wi‑Fi unless the VPN is active.\n\nOnce you have the written approval, you can proceed with your remote work for the month. If you do not obtain approval, your payroll or benefits could be impacted.",
+      "To work from your home country for a month (≈30 days) you must:\n\n1. **Request written approval** from People Operations **and** Legal before you start.  \n   * Submit the request through the company’s formal travel/remote‑work approval process, indicating the dates, the reason (visiting family), and confirming that you will stay in the country for more than 15 consecutive business days.\n\n2. **Comply with the security requirements** while abroad:  \n   * Use your company‑issued laptop with disk encryption.  \n   * Connect to the company VPN whenever you access internal systems.  \n   * Do not work over public Wi‑Fi unless the VPN is active.\n\nIf you do not obtain this approval, the extended work‑from‑abroad period could affect your payroll and benefits.",
+      "To work from your home country for a full month you must:\n\n1. **Get Prior Written Approval**  \n   - Submit a written request to **People Operations** and **Legal**.  \n   - Because the stay will be more than 15 consecutive business days, the policy requires written approval before you begin working remotely from abroad.\n\n2. **Follow Security Requirements**  \n   - Use a company‑issued laptop with disk encryption.  \n   - Connect through the company VPN whenever accessing internal systems, and avoid public Wi‑Fi without VPN.\n\n3. **Maintain Core‑Hours Availability**  \n   - Even while abroad, you must be reachable during your local team’s core hours (10:00‑15:00) unless you are on approved PTO or sick leave.\n\n4. **Review Payroll/Benefits Impact**  \n   - The policy notes that unapproved extended work‑from‑abroad may affect payroll and benefits eligibility, so confirm any changes with People Ops and Legal.\n\n**Next Step:** Send your request to People Operations (and Legal) as soon as possible, detailing the dates and confirming your adherence to the above security and availability requirements. Once they issue written approval, you may proceed with your month‑long stay.",
+      "I cannot answer this based on the provided documents."
+    ],
+    "q14_before": [
+      "You are entitled to **16 weeks of paid parental leave** as a birthing parent.",
+      "I cannot answer this based on the provided documents.",
+      "I get 16 weeks of paid parental leave.",
+      "I’m entitled to **16 weeks of paid parental leave** as a birthing parent.",
+      "16 weeks of paid parental leave.",
+      "You’re entitled to **16 weeks of paid parental leave** as a birthing parent.",
+      "I get **16 weeks** of paid parental leave as the birthing parent.",
+      "I get **16 weeks of paid parental leave** as a birthing parent."
+    ],
+    "q14_after": [
+      "Based on the policy documents you provided:\n\n- **If your birth occurs in 2025 (or before the 2026 addendum takes effect)**, the policy states that birthing parents receive **16 weeks** of paid parental leave.\n\n- **If your birth occurs in 2026 or later**, the HR Policy Addendum that went into effect on January 1, 2026 increased that entitlement to **20 weeks** of paid parental leave.\n\nSo the number of weeks you are entitled to depends on whether your birth takes place before or after the 2026 policy update.",
+      "I cannot answer this based on the provided documents.",
+      "I cannot answer this based on the provided documents.",
+      "You’re entitled to **20 weeks** of paid parental leave as a birthing parent, as updated in the 2026 addendum to the policy (up from 16 weeks in the original 2025 policy).",
+      "According to Solstice Analytics’ policy documents:\n\n| Effective date | Duration for birthing parents |\n|-----------------|--------------------------------|\n| January 1, 2025 (original Parental Leave Policy) | **16 weeks** of paid leave |\n| January 1, 2026 (addendum) | **20 weeks** of paid leave (increase from 16 weeks) |\n\nSo, if the birth occurs **in 2025** you would receive 16 weeks of paid parental leave. If it occurs **in 2026 or later** the addendum applies and you would receive 20 weeks of paid parental leave.",
+      "According to the most recent update in the Solstice Analytics HR policy addendum (effective January 1, 2026), birthing parents receive **20 weeks of paid parental leave** for the birth of a child.",
+      "You’re entitled to **20 weeks of paid parental leave** as a birthing parent (per the January 1, 2026 addendum).",
+      "I cannot answer this based on the provided documents."
+    ],
+    "q18_before": [
+      "No, you are not eligible for overtime pay. According to the policy, exempt employees (most salaried professional roles) are not eligible for overtime pay.",
+      "No.  Exempt (most salaried) employees are not eligible for overtime pay.",
+      "No. Exempt employees—most salaried professionals—are not eligible for overtime pay.",
+      "No. Under the policy, salaried exempt employees are not eligible for overtime pay.",
+      "I cannot answer this based on the provided documents.",
+      "No. According to the policy, salaried employees classified as **exempt** are not eligible for overtime pay. Non‑exempt employees receive overtime pay at 1.5× their regular rate for hours worked over 40 in a week; exempt employees do not.",
+      "No, as a salaried exempt employee you are not eligible for overtime pay. The policy states that exempt employees (most salaried professional roles) do not qualify for overtime compensation.",
+      "No, as a salaried exempt employee you are not eligible for overtime pay."
+    ],
+    "q18_after": [
+      "No, you are not eligible for overtime pay as a salaried exempt employee.",
+      "No. According to the policy, exempt employees (most salaried professional roles) are **not eligible for overtime pay**.",
+      "No. According to the policy, exempt employees (most salaried professional roles) are not eligible for overtime pay.",
+      "I am not eligible for overtime pay because I am classified as an exempt employee. Exempt employees (most salaried professional roles) are not eligible for overtime pay.",
+      "I cannot answer this based on the provided documents.",
+      "No. According to Solstice Analytics’ policy, exempt employees (most salaried professional roles) are not eligible for overtime pay.",
+      "No. According to the Working Hours and Overtime Policy, exempt employees (most salaried professional roles) are not eligible for overtime pay.",
+      "No. As an exempt employee, you are not eligible for overtime pay."
+    ],
+    "q20_before": [
+      "I cannot expense my Peloton subscription. The policy lists “spa or gym services” as non‑reimbursable items, and a Peloton subscription falls into that category.",
+      "I cannot answer this based on the provided documents.",
+      "I’m sorry, but the policy does not allow reimbursement for personal fitness or gym subscriptions such as Peloton. According to the non‑reimbursable items list, “spa or gym services” are excluded, and a Peloton subscription would be considered a gym service. Therefore, it would not be eligible for expense reimbursement.",
+      "I cannot expense my Peloton subscription.",
+      "No, a Peloton subscription is not reimbursable. The policy lists “spa or gym services” as non‑reimbursable items.",
+      "I cannot answer this based on the provided documents.",
+      "No—Peloton is considered a personal gym/subscription service, and the policy lists spa or gym services as non‑reimbursable items.",
+      "I cannot answer this based on the provided documents."
+    ],
+    "q20_after": [
+      "Yes – a Peloton subscription qualifies as a wellness‑app expense.  \nUnder the Wellness Benefit you may claim up to **$50 per month** for gym memberships, fitness classes, or wellness apps, submitted through the normal expense process.",
+      "Yes—Peloton is covered under the wellness benefit.  \nEmployees can expense up to **$50 per month** for gym memberships, fitness classes, or wellness apps, which includes a Peloton subscription.  \n\nTo claim it:\n\n1. Submit the expense in Expensify within 30 days of incurring it.  \n2. Attach a valid receipt or a screenshot of the subscription confirmation.  \n3. Ensure the total monthly expense for wellness items does not exceed $50.  \n\nIf you stay within that limit, the expense will be reimbursed via the normal payroll cycle.",
+      "Yes – a Peloton subscription is considered a wellness‑app expense. You can submit it for reimbursement, but the amount is capped at $50 per month and must be filed through the standard expense process outlined in the policy.",
+      "Yes. The policy allows employees to expense up to $50 per month for gym memberships, fitness classes or wellness apps. A Peloton subscription falls under “wellness apps,” so you can submit it through the normal expense process as long as it stays within the monthly cap.",
+      "Yes.  Peloton is treated the same as any other gym membership or fitness‑related expense.  Under the Wellness Benefit policy you can submit a Peloton subscription for reimbursement, but it is limited to **$50 per month** and must be submitted through the standard expense process (with a valid receipt).",
+      "Yes – a Peloton subscription falls under the “wellness benefit” category.  \nYou can expense it (up to $50 per month) as long as you:\n\n1. **Keep the cost within the $50/month cap** (the subscription fee must not exceed that limit).  \n2. **Submit the expense through the standard Expensify process** referenced in the Expense and Reimbursement Policy.  \n3. **Attach the required documentation** (e.g., the subscription receipt or statement showing the charge).  \n\nIf the subscription cost is above $50 per month, you would exceed the allowed wellness benefit limit and would not be reimbursable under the policy.",
+      "Yes – the policy allows you to claim a Peloton subscription as part of your wellness benefit.  \n\n* **Amount** – You can expense up to $50 per month for gym memberships, fitness classes, or wellness apps.  \n* **Approval** – The expense still needs manager approval (as with all wellness‑related claims).  \n* **Submission** – File the claim through the standard Expensify process with a valid receipt.\n\nIf your subscription costs more than $50 a month, the excess amount will not be reimbursed. If you’re unsure whether your subscription meets the $50 cap or need an additional approval, check with your manager or the Finance team.",
+      "Yes – a Peloton subscription qualifies as a “wellness app” or fitness expense. According to the policy, you may submit up to $50 per month for gym memberships, fitness classes, or wellness apps through the normal expense process."
+    ]
+  }
+}

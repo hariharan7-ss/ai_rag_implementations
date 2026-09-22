@@ -4,8 +4,11 @@ from typing import List, Dict, Any
 from pinecone import Pinecone, ServerlessSpec
 
 class PineconeStore:
-    def __init__(self, index_name: str = "documents"):
+    def __init__(self, index_name: str = "documents", namespace: str = None):
         self.index_name = index_name
+        # "" is Pinecone's default namespace, so the running app is unaffected
+        # unless PINECONE_NAMESPACE is set (the eval harness sets it).
+        self.namespace = namespace if namespace is not None else os.environ.get("PINECONE_NAMESPACE", "")
         self._pc = None
         self._index = None
 
@@ -47,13 +50,14 @@ class PineconeStore:
         # Upsert in batches of 100
         batch_size = 100
         for i in range(0, len(vectors), batch_size):
-            self.index.upsert(vectors=vectors[i:i+batch_size])
+            self.index.upsert(vectors=vectors[i:i+batch_size], namespace=self.namespace)
 
     def search(self, query_embedding: List[float], limit: int = 5) -> List[Dict[str, Any]]:
         response = self.index.query(
             vector=query_embedding,
             top_k=limit,
-            include_metadata=True
+            include_metadata=True,
+            namespace=self.namespace
         )
         
         results = []
@@ -66,7 +70,7 @@ class PineconeStore:
 
     def delete_document(self, document_id: str):
         try:
-            self.index.delete(filter={"document_id": {"$eq": document_id}})
+            self.index.delete(filter={"document_id": {"$eq": document_id}}, namespace=self.namespace)
         except Exception as e:
             print(f"Error deleting document {document_id} from Pinecone: {e}")
 
