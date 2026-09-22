@@ -1,0 +1,134 @@
+[
+  {
+    "n": 1,
+    "question": "How many PTO days do I get per year, and how many can I roll over to next year?",
+    "trace_id": "trace_43f638dabe",
+    "answer": "You accrue **18 PTO days per calendar year** (1.5 days each month).  You may carry over **up to 5 unused PTO days** into the following year; any balance beyond 5 is forfeited on December 31."
+  },
+  {
+    "n": 2,
+    "question": "I've been out sick for 4 days with the flu — does HR need a doctor's note?",
+    "trace_id": "trace_1011e7f555",
+    "answer": "According to Solstice Analytics’ Sick Leave policy, a doctor’s note is *may* be requested by HR for any absence of **three or more consecutive sick days**. It is not an automatic requirement, so you do not have to provide one unless HR asks for it."
+  },
+  {
+    "n": 3,
+    "question": "What's the home office equipment stipend for remote employees right now?",
+    "trace_id": "trace_c558d40eea",
+    "answer": "The current one‑time home office equipment stipend for remote employees is **USD 600**."
+  },
+  {
+    "n": 4,
+    "question": "If I'm hybrid, how many days a week do I have to be in the office?",
+    "trace_id": "trace_4c42cb60fd",
+    "answer": "You must be in the office at least 3 days a week."
+  },
+  {
+    "n": 5,
+    "question": "I want to work from my home country (different from where I'm employed) for a month while visiting family — what do I need to do?",
+    "trace_id": "trace_471205cb64",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 6,
+    "question": "Who do I talk to if a coworker is harassing me?",
+    "trace_id": "trace_761b18eec5",
+    "answer": "You should report the harassment to a supervisor or manager first, and then involve the company’s formal complaint bodies—**the Internal Complaints Committee (ICC) and HR**. In practice:\n\n1. **Talk to your immediate manager or any senior supervisor** – they are the first point of contact for workplace concerns.  \n2. **If you prefer a more formal route or need anonymity, contact the ICC** – the company’s designated committee for handling harassment complaints.  \n3. **HR (People Operations)** – can also receive and support the complaint, ensuring it follows the company’s procedures.  \n\nSo, reach out to a manager/superior, and for formal reporting, file with the ICC and HR."
+  },
+  {
+    "n": 7,
+    "question": "Can I get fired on the spot for a Code of Conduct violation, or do I always get a warning first?",
+    "trace_id": "trace_2a475b782f",
+    "answer": "Yes.  \nAccording to the policies you provided, the company may terminate an employee immediately for **severe violations**—for example, harassment, safety threats, theft, or other actions listed under “misconduct.” For less severe infractions, the disciplinary process typically starts with a verbal warning, then a written warning, and may progress to a performance improvement plan, suspension, or finally termination, depending on the severity and the employee’s record."
+  },
+  {
+    "n": 8,
+    "question": "How long after a business trip do I have to submit my expenses?",
+    "trace_id": "trace_bb80cb7e56",
+    "answer": "You must submit your expenses within **30 days** of incurring them. Submissions after that period may be denied at Finance’s discretion."
+  },
+  {
+    "n": 9,
+    "question": "What's the daily meal limit when I'm traveling for work?",
+    "trace_id": "trace_850a855653",
+    "answer": "The daily meal limit for business travel is **$75 USD**. This is broken down into up to $15 for breakfast, $20 for lunch, and $40 for dinner."
+  },
+  {
+    "n": 10,
+    "question": "How much does Solstice match on my 401(k) if I contribute 6%?",
+    "trace_id": "trace_17bec77d11",
+    "answer": "A 6% employee contribution receives a 5% company match on your 401(k)."
+  },
+  {
+    "n": 11,
+    "question": "When does my health insurance kick in after I start?",
+    "trace_id": "trace_f8f559ab97",
+    "answer": "Your health insurance begins on the **first day of the month after you start**. There’s no additional waiting period—coverage is available immediately from that date."
+  },
+  {
+    "n": 12,
+    "question": "How often do I get a performance review, and does the mid-year one affect my raise?",
+    "trace_id": "trace_741533f7e1",
+    "answer": "You receive a formal performance review **twice a year**.  \n* The **mid‑year check‑in** (June for Solstice Analytics, April or October for other companies) is a developmental review and is **not tied to compensation**.  \n* The **annual review** (December for Solstice Analytics, the month closest to your date of joining for other firms) determines your rating, merit increase, and bonus.\n\nSo, the mid‑year review does not influence your raise; raises are decided during the annual review cycle."
+  },
+  {
+    "n": 13,
+    "question": "What happens if I get rated 'Needs Improvement' on my review?",
+    "trace_id": "trace_f31f9c54f1",
+    "answer": "If you receive a **“Needs Improvement”** rating on your annual performance review, the following steps are triggered, according to the policies outlined in the documents:\n\n1. **Performance Improvement Plan (PIP)**  \n   * Employees who are rated “Needs Improvement” (or “Unsatisfactory”) are eligible to be placed on a PIP.  \n   * A PIP will define specific, measurable goals and a timeline—typically 30 to 60 days.  \n   * A formal check‑in is scheduled at the midpoint of the plan to review progress.  \n\n2. **Outcome of the PIP**  \n   * If you successfully meet the PIP goals by the end of the timeline, the plan is closed and you can continue with your usual performance cycle.  \n   * Failure to meet the PIP goals may result in termination of employment.\n\n3. **Impact on Compensation**  \n   * The “Needs Improvement” rating can also affect merit increases and bonus calculations, as these are tied to annual ratings and are communicated within 30 days after the review is finalized.\n\nIn short, a “Needs Improvement” rating typically leads to a structured improvement plan with clear expectations and a defined timeframe, and the plan’s outcome may affect both your employment status and compensation."
+  },
+  {
+    "n": 14,
+    "question": "How many weeks of paid leave do I get as the birthing parent having a baby this year?",
+    "trace_id": "trace_5a94a26b63",
+    "answer": "I get **16 weeks** of paid parental leave as a birthing parent."
+  },
+  {
+    "n": 15,
+    "question": "I'm adopting a child — how much parental leave am I entitled to right now, and by when do I need to use it?",
+    "trace_id": "trace_1650e61840",
+    "answer": "You’re entitled to **8 weeks of paid parental leave** for adoption.  \n- The leave must be taken **within 12 months of the adoption date**.  \n- It can be taken continuously or split into two blocks of at least 2 weeks each, with manager and People Operations approval for any split arrangement.  \n\nIf you work part‑time (≥20 hrs/week), the 8 weeks are prorated to your hours."
+  },
+  {
+    "n": 16,
+    "question": "How much notice do I need to give before resigning if I'm an individual contributor?",
+    "trace_id": "trace_e0db8013fc",
+    "answer": "You must give a 3‑month working notice."
+  },
+  {
+    "n": 17,
+    "question": "What happens to my health benefits the day I leave the company?",
+    "trace_id": "trace_e80a1a4ad1",
+    "answer": "Your health coverage will terminate on the last day of the calendar month in which you stop working. After that, you may elect to keep the plan through COBRA (in the U.S.) or an equivalent local program, but you would have to pay for it yourself. People Operations will give you the details on how to enroll and pay for that coverage within 14 days of your termination date."
+  },
+  {
+    "n": 18,
+    "question": "Am I eligible for overtime pay if I'm a salaried exempt employee?",
+    "trace_id": "trace_4695183e2d",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 19,
+    "question": "What's the stipend if I'm on the on-call rotation this week?",
+    "trace_id": "trace_1a5b275421",
+    "answer": "The on‑call stipend is $100 USD per week while you’re on the on‑call rotation."
+  },
+  {
+    "n": 20,
+    "question": "Can I expense my Peloton subscription?",
+    "trace_id": "trace_47e1234bae",
+    "answer": "No.  \nThe policy lists **gym services** (along with spa services) as non‑reimbursable items. A Peloton subscription is a gym‑type service, so it would not be covered for expense reimbursement."
+  },
+  {
+    "n": 21,
+    "question": "Does Solstice offer pet insurance for employees?",
+    "trace_id": "trace_501f52a72a",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 22,
+    "question": "My partner and I both work here and I just became his manager after a reorg — is that a problem?",
+    "trace_id": "trace_2da750f79d",
+    "answer": "**Short answer:**  \nYes – this is a potential conflict of interest that must be disclosed to the company. If it isn’t disclosed and handled properly, it can violate the company’s conflict‑of‑interest policy and lead to disciplinary action.\n\n**Why it matters (based on the policy):**\n\n| What the policy says | What it means for you |\n|----------------------|------------------------|\n| *Employees must disclose any outside employment, financial interest, or personal relationship that could reasonably create a conflict of interest, including romantic relationships with direct reports.* | Your new manager‑direct‑report relationship falls squarely into this category. |\n| *Undisclosed conflicts of interest may result in disciplinary action.* | If you do not disclose this relationship, you could face a warning, suspension, or even termination. |\n| *The company reserves the right to address such conflicts through People Operations and management.* | The company may require you to move to a different team, reassign the reporting line, or take other steps to eliminate the conflict. |\n\n**What you should do:**\n\n1. **Disclose immediately.**  \n   Notify HR / People Operations and your own manager (if different from the new direct report) about the relationship.  \n2. **Seek approval for the new reporting structure.**  \n   The company may need to approve the change or require an alternative arrangement (e.g., the direct report moves to another team or you move to a different role).  \n3. **Document everything.**  \n   Keep records of the disclosure and any decisions made so you have evidence that you followed the policy.  \n4. **Follow any additional steps the company requests.**  \n   This may include additional training, monitoring, or a formal conflict‑of‑interest waiver.\n\n**If you don’t disclose and the company discovers it later,** you could be subject to the disciplinary process described in the handbook—ranging from a verbal warning to immediate termination for severe violations.\n\n**Bottom line:**  \nTreat it as a conflict of interest, disclose it promptly, and follow the company’s procedures. This protects you and ensures compliance with Soft Suave’s policies."
+  }
+]

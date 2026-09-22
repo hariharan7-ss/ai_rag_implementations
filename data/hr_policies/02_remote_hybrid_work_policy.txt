@@ -1,0 +1,24 @@
+Solstice Analytics — Remote and Hybrid Work Policy
+Effective: March 1, 2025
+Owner: People Operations
+
+1. Eligibility
+Employees in roles designated "remote-eligible" by their department head may work remotely. New hires must complete a 90-day onboarding period working from an approved office location before transitioning to a remote or hybrid arrangement, unless the role was advertised and hired as fully remote from day one.
+
+2. Work Arrangements
+There are three designations: Office-based (in office 5 days/week), Hybrid (in office at least 3 days/week, days set by team lead), and Remote (no regular office requirement). An employee's designation is recorded in the HR system and reviewed every 6 months.
+
+3. Equipment Stipend
+Remote and hybrid employees receive a one-time home office equipment stipend of 400 USD (or local currency equivalent) upon transitioning to remote/hybrid status, plus an ongoing monthly internet stipend of 25 USD. Stipend amounts are reviewed annually — see the most recent Policy Addendum for any updates to these figures, as addenda supersede the amounts listed here.
+
+4. Core Hours
+All employees, regardless of work arrangement, must be reachable during core hours of 10:00-15:00 in their local team's primary timezone, except during approved PTO or sick leave.
+
+5. Working from Another Country
+Employees wishing to work remotely from a country other than their country of employment for more than 15 consecutive business days must get prior written approval from People Operations and Legal, due to tax and employment law implications. Unapproved extended work-from-abroad may affect payroll and benefits eligibility.
+
+6. Security Requirements
+Remote employees must use company-issued laptops with disk encryption enabled, connect via the company VPN when accessing internal systems, and may not work from public Wi-Fi without VPN active.
+
+7. Performance Expectations
+Remote and hybrid employees are held to the same performance standards as office-based employees. Managers should not treat work location as a factor in performance reviews.
