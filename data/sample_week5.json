@@ -1,0 +1,90 @@
+{
+  "method": "random.Random(SEED).sample(sorted(set(frame_trace_ids)), N)",
+  "seed": 20260923,
+  "n": 20,
+  "frame_file": "data/run_results_week5.json",
+  "frame_size": 100,
+  "sampling_rate": 0.2,
+  "selected": [
+    {
+      "trace_id": "trace_8620201a5e",
+      "query": "What's the weekly stipend for being on the on-call rotation?"
+    },
+    {
+      "trace_id": "trace_455c035a9f",
+      "query": "I have a side consulting gig on weekends - do I need to tell anyone?"
+    },
+    {
+      "trace_id": "trace_668a2c1eb2",
+      "query": "When does my health insurance start after my first day?"
+    },
+    {
+      "trace_id": "trace_88bb90969a",
+      "query": "How much notice should I give before starting parental leave?"
+    },
+    {
+      "trace_id": "trace_93ae53a2f6",
+      "query": "Am I eligible for overtime if I'm salaried and exempt?"
+    },
+    {
+      "trace_id": "trace_a926e6d27e",
+      "query": "When will I find out my merit increase amount?"
+    },
+    {
+      "trace_id": "trace_3a89efd65a",
+      "query": "If I resign properly, can I be rehired later?"
+    },
+    {
+      "trace_id": "trace_0acbf02c86",
+      "query": "When is my self-assessment due relative to my manager's review?"
+    },
+    {
+      "trace_id": "trace_e60d9ff896",
+      "query": "How many weeks of paid parental leave do birthing parents get right now?"
+    },
+    {
+      "trace_id": "trace_0f1248673e",
+      "query": "Do I need to tell my manager before my shift starts if I'm calling in sick?"
+    },
+    {
+      "trace_id": "trace_b6f849bb05",
+      "query": "I'm exempt and got paged for an hour at midnight - do I get anything?"
+    },
+    {
+      "trace_id": "trace_c80124fb42",
+      "query": "How many PTO days do I accrue each year and what's the monthly accrual rate?"
+    },
+    {
+      "trace_id": "trace_1aa7dc43ff",
+      "query": "What are the five rating levels on the review scale?"
+    },
+    {
+      "trace_id": "trace_a908d47733",
+      "query": "How long does a workplace investigation usually take?"
+    },
+    {
+      "trace_id": "trace_ec90b27d14",
+      "query": "Does the 401k match vest immediately or is there a schedule?"
+    },
+    {
+      "trace_id": "trace_eec181480f",
+      "query": "My partner and I both work here and I just became his manager - is that a problem?"
+    },
+    {
+      "trace_id": "trace_1c9285436f",
+      "query": "When is open enrollment and when does the new coverage start?"
+    },
+    {
+      "trace_id": "trace_79ab3b7158",
+      "query": "Can I be fired immediately for a Code of Conduct violation or is there a warning first?"
+    },
+    {
+      "trace_id": "trace_3fa2c17085",
+      "query": "What happens if I'm rated Needs Improvement?"
+    },
+    {
+      "trace_id": "trace_ba38cde0c7",
+      "query": "What's the one-time home office equipment stipend for remote employees?"
+    }
+  ]
+}

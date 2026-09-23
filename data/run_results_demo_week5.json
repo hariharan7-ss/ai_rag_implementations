@@ -1,0 +1,62 @@
+[
+  {
+    "n": 1,
+    "question": "How many PTO days do I get per year, and how many can I roll over to next year?",
+    "trace_id": "trace_5d6c5b7d2c",
+    "answer": "You accrue **18 PTO days per calendar year**.  \nYou may carry over **up to 5 unused PTO days** into the next year; any balance above 5 days is forfeited on December 31st (unless local law says otherwise)."
+  },
+  {
+    "n": 2,
+    "question": "What's the daily meal limit when I'm traveling for work?",
+    "trace_id": "trace_f8d4cad9b0",
+    "answer": "The policy caps meals during business travel at **$75 per day** (up to $15 for breakfast, $20 for lunch, and $40 for dinner)."
+  },
+  {
+    "n": 3,
+    "question": "How much does Solstice match on my 401(k) if I contribute 6%?",
+    "trace_id": "trace_9e6109030d",
+    "answer": "Solstice matches a total of **5 % of your base salary** when you contribute 6 % to your 401(k)."
+  },
+  {
+    "n": 4,
+    "question": "When does my health insurance kick in after I start?",
+    "trace_id": "trace_f5dcb6e99b",
+    "answer": "Your health insurance begins on the **first day of the month after you start**. There is no additional waiting period beyond that."
+  },
+  {
+    "n": 5,
+    "question": "How often do I get a performance review, and does the mid-year one affect my raise?",
+    "trace_id": "trace_f5421fbec1",
+    "answer": "You receive two formal performance reviews each year at Solstice Analytics:\n\n1. **Mid‑year check‑in (June)** – This is a developmental review. It focuses on progress toward goals and growth, but it **does not influence your merit increase or bonus**.\n\n2. **Annual review (December)** – This is the compensation‑linked review. The rating you receive here determines your merit increase and bonus payout.\n\nSo, you get a review twice a year, and the mid‑year review does not affect your raise."
+  },
+  {
+    "n": 6,
+    "question": "How long after a business trip do I have to submit my expenses?",
+    "trace_id": "trace_9c27b41de1",
+    "answer": "You must submit your expenses within **30 days** of the date they were incurred."
+  },
+  {
+    "n": 7,
+    "question": "Who do I talk to if a coworker is harassing me?",
+    "trace_id": "trace_d44c2bb057",
+    "answer": "You should report the harassment to one of the following:\n\n1. **Your manager**  \n2. **A People Operations team member**  \n3. **The anonymous Ethics Hotline** available on the internal portal  \n\nAll of these options are confidential, and retaliation against a good‑faith reporter is prohibited."
+  },
+  {
+    "n": 8,
+    "question": "How much notice do I need to give before resigning if I'm an individual contributor?",
+    "trace_id": "trace_4d97906dff",
+    "answer": "You need to give at least **two weeks’ written notice** before resigning if you are an individual contributor."
+  },
+  {
+    "n": 9,
+    "question": "Am I eligible for overtime pay if I'm a salaried exempt employee?",
+    "trace_id": "trace_92b118057d",
+    "answer": "No. According to the policy, exempt employees—most salaried professional roles—are not eligible for overtime pay."
+  },
+  {
+    "n": 10,
+    "question": "What's the stipend if I'm on the on-call rotation this week?",
+    "trace_id": "trace_25f2e070c7",
+    "answer": "The on‑call stipend is $100 USD per week for each week you’re on the rotation."
+  }
+]

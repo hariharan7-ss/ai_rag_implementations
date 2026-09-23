@@ -1,0 +1,602 @@
+[
+  {
+    "n": 1,
+    "question": "How many PTO days do I accrue each year and what's the monthly accrual rate?",
+    "trace_id": "trace_c80124fb42",
+    "answer": "You accrue **18 PTO days per calendar year**, which is accrued at a rate of **1.5 PTO days per month**."
+  },
+  {
+    "n": 2,
+    "question": "If I don't use all my PTO by December, how much can I carry into next year?",
+    "trace_id": "trace_4154caefd5",
+    "answer": "You can carry over a maximum of **5 unused PTO days** into the next calendar year. Any balance above 5 days is forfeited on December 31st (unless local law requires otherwise)."
+  },
+  {
+    "n": 3,
+    "question": "I have 9 unused PTO days on December 20th - what happens to them?",
+    "trace_id": "trace_e8e660b9c2",
+    "answer": "On December 20th you have 9 unused PTO days.  \nAccording to the policy, only **5 days can be carried over** into the next calendar year.  \nThe remaining **4 days will be forfeited on December 31st** (unless local law says otherwise)."
+  },
+  {
+    "n": 4,
+    "question": "Do I need to give notice before taking a single PTO day next Tuesday?",
+    "trace_id": "trace_3b016b5a4a",
+    "answer": "Yes. For a single‑day PTO (1–2 days), the policy requires a 24‑hour notice. Submit your request in the HR system by Monday so your manager can approve it."
+  },
+  {
+    "n": 5,
+    "question": "How far in advance do I need to request a week off?",
+    "trace_id": "trace_f7b1bfab80",
+    "answer": "You need to submit the request at least **5 business days in advance** for any absence longer than two consecutive days (such as a week off)."
+  },
+  {
+    "n": 6,
+    "question": "How many paid sick days do I get, and do they roll over?",
+    "trace_id": "trace_9c295f22c4",
+    "answer": "You receive **10 paid sick days per calendar year**. Sick leave does **not roll over** to the next year."
+  },
+  {
+    "n": 7,
+    "question": "I've been out sick three days straight - do I need a doctor's note?",
+    "trace_id": "trace_b52271b660",
+    "answer": "Yes—if you’re absent for three or more consecutive sick days, HR may request a doctor’s note. If they ask, you should provide it."
+  },
+  {
+    "n": 8,
+    "question": "Do I need to tell my manager before my shift starts if I'm calling in sick?",
+    "trace_id": "trace_0f1248673e",
+    "answer": "Yes. According to the policy, you should notify your manager before your normal start time on the day you’re absent for sick leave."
+  },
+  {
+    "n": 9,
+    "question": "How many public holidays does Solstice observe and where is the list published?",
+    "trace_id": "trace_2a003d7d4f",
+    "answer": "Solstice observes **11 paid public holidays per year**.  \nThe list of those holidays is **published by People Operations each December for the following year** and is posted on the **internal HR portal**."
+  },
+  {
+    "n": 10,
+    "question": "I've used up all my PTO and sick days but need more time off - what are my options?",
+    "trace_id": "trace_5158c673ef",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 11,
+    "question": "How many bereavement days do I get if my father passes away?",
+    "trace_id": "trace_50d25326e6",
+    "answer": "You are entitled to **5 paid bereavement days** for the death of an immediate family member such as a parent."
+  },
+  {
+    "n": 12,
+    "question": "Is bereavement leave different for a grandparent than for a spouse?",
+    "trace_id": "trace_92da47f74f",
+    "answer": "Yes.  \n- **Spouse**: 5 paid bereavement days (immediate family).  \n- **Grandparent**: 2 paid bereavement days (extended family)."
+  },
+  {
+    "n": 13,
+    "question": "What's the one-time home office equipment stipend for remote employees?",
+    "trace_id": "trace_ba38cde0c7",
+    "answer": "The one‑time home office equipment stipend for remote employees is **$600 USD** (or the local currency equivalent)."
+  },
+  {
+    "n": 14,
+    "question": "How much is the monthly internet stipend if I work remotely?",
+    "trace_id": "trace_824c602f3d",
+    "answer": "The monthly internet stipend for remote employees is **$35 USD**."
+  },
+  {
+    "n": 15,
+    "question": "I just switched to hybrid - what stipends am I entitled to now?",
+    "trace_id": "trace_a46386a335",
+    "answer": "Based on the most recent policy addendum (effective January 1, 2026), a hybrid employee is entitled to:\n\n| Stipend | Amount |\n|---------|--------|\n| One‑time home‑office equipment stipend | **$600 USD** (or local‑currency equivalent) |\n| Ongoing monthly internet stipend | **$35 USD** |\n\nThese amounts replace the earlier $400 equipment stipend and $25 internet stipend that were listed in the original Remote and Hybrid Work Policy. If you switched to hybrid after the addendum’s effective date, you should receive the updated figures above."
+  },
+  {
+    "n": 16,
+    "question": "How many days a week does a hybrid employee need to be in the office?",
+    "trace_id": "trace_44c1c9d585",
+    "answer": "A hybrid employee must be in the office **at least 3 days per week**."
+  },
+  {
+    "n": 17,
+    "question": "I'm a new hire - can I start working remotely right away?",
+    "trace_id": "trace_876552f842",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 18,
+    "question": "What are the core hours I have to be reachable during?",
+    "trace_id": "trace_381bd946d2",
+    "answer": "The core hours during which you must be reachable are **10:00 – 15:00** in your local team’s primary time zone (unless you are on approved PTO or sick leave)."
+  },
+  {
+    "n": 19,
+    "question": "I want to work from my parents' place abroad for three weeks - what approval do I need?",
+    "trace_id": "trace_2316fe6bad",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 20,
+    "question": "Can I work from a coffee shop on public Wi-Fi if I'm careful?",
+    "trace_id": "trace_4a2a1e63b3",
+    "answer": "No. The policy states that remote employees may **not** work from public Wi‑Fi unless they are connected through the company VPN. So you can work from a coffee shop only if you’re using the VPN; otherwise it’s not allowed."
+  },
+  {
+    "n": 21,
+    "question": "Does working remotely count against me in my performance review?",
+    "trace_id": "trace_67f0b83e72",
+    "answer": "No. Remote or hybrid employees are held to the same performance standards as office‑based employees, and managers are instructed not to treat work location as a factor in performance reviews."
+  },
+  {
+    "n": 22,
+    "question": "How often is my remote or hybrid designation reviewed?",
+    "trace_id": "trace_9071b304a1",
+    "answer": "Your remote or hybrid designation is reviewed every **six months**."
+  },
+  {
+    "n": 23,
+    "question": "Who do I report harassment to if it's my own manager doing it?",
+    "trace_id": "trace_df19ae1b5b",
+    "answer": "If your manager is the one doing the harassment, you should **report it to People Operations** (any People Operations team member) or use the **anonymous Ethics Hotline** on the internal portal. Both options allow you to file a confidential report, and retaliation against a good‑faith reporter is prohibited."
+  },
+  {
+    "n": 24,
+    "question": "Is the Ethics Hotline anonymous?",
+    "trace_id": "trace_f02d85f5ec",
+    "answer": "Yes, the Ethics Hotline is anonymous."
+  },
+  {
+    "n": 25,
+    "question": "How quickly will People Ops acknowledge a report I file?",
+    "trace_id": "trace_2afbfce9bd",
+    "answer": "People Operations will acknowledge a report within **2 business days**."
+  },
+  {
+    "n": 26,
+    "question": "How long does a workplace investigation usually take?",
+    "trace_id": "trace_a908d47733",
+    "answer": "A workplace investigation typically aims to be completed within **15 business days** of the report, with the employee receiving status updates at least every two weeks during the process."
+  },
+  {
+    "n": 27,
+    "question": "Will I be told what's happening during an ongoing investigation?",
+    "trace_id": "trace_f25b9da140",
+    "answer": "Yes. According to the policy, People Operations will keep the reporting employee updated on the investigation’s status at least every two weeks while it is active."
+  },
+  {
+    "n": 28,
+    "question": "Can I be fired immediately for a Code of Conduct violation or is there a warning first?",
+    "trace_id": "trace_79ab3b7158",
+    "answer": "Yes – the policy allows for immediate termination in certain cases, but it is not automatic for every Code of Conduct violation.\n\n**What the documents say**\n\n| Severity | Disciplinary outcome |\n|----------|----------------------|\n| **Severe violations** (e.g., harassment, safety threats, theft) | Immediate termination *without* prior warning steps. |\n| **Other violations** | Disciplinary action can range from a verbal warning, written warning, performance‑improvement plan, suspension, or termination, depending on the seriousness of the infraction. The decision is made by People Operations in consultation with the employee’s manager. |\n\nSo, if your conduct falls into the “severe” category, the company can terminate you immediately. For less severe infractions, you would normally receive a warning (verbal or written) before any further action."
+  },
+  {
+    "n": 29,
+    "question": "I started dating someone on my team - do I have to disclose it?",
+    "trace_id": "trace_ed46e3eb82",
+    "answer": "Yes.  \nAccording to Solstice Analytics’ Code of Conduct, any personal relationship that could create a conflict of interest—including a romantic relationship with a direct report—must be disclosed to People Operations (or your manager). Failure to disclose such a relationship can lead to disciplinary action."
+  },
+  {
+    "n": 30,
+    "question": "Can I use my work laptop for personal email?",
+    "trace_id": "trace_b9a3b907ea",
+    "answer": "Yes. The policy allows **limited incidental personal use** of company equipment, including personal email, provided it does not interfere with work, violate any other policy, or involve illegal activity."
+  },
+  {
+    "n": 31,
+    "question": "Am I still bound by confidentiality after I leave the company?",
+    "trace_id": "trace_341c8780f0",
+    "answer": "Yes. According to the policy, employees must not disclose confidential business information, customer data, or trade secrets to unauthorized parties **both during employment and after departure**, in line with the confidentiality agreement signed at hire."
+  },
+  {
+    "n": 32,
+    "question": "I have a side consulting gig on weekends - do I need to tell anyone?",
+    "trace_id": "trace_455c035a9f",
+    "answer": "Yes. According to the company’s **Conflicts of Interest** policy, any outside employment or consulting work that could reasonably create a conflict with your role must be disclosed. You should let your manager (or People Operations, if that’s the designated reporting line) know about the weekend consulting gig so they can assess whether it poses a conflict and determine any required steps (e.g., a written disclosure or approval). Failure to disclose could be considered a violation of the policy."
+  },
+  {
+    "n": 33,
+    "question": "How long do I have to submit an expense after a business trip?",
+    "trace_id": "trace_2df67efdac",
+    "answer": "You must submit the expense within **30 days** of the date it was incurred. Submissions after that period may be denied at Finance’s discretion."
+  },
+  {
+    "n": 34,
+    "question": "Do I need a receipt for a 20 dollar taxi ride?",
+    "trace_id": "trace_619fe76818",
+    "answer": "No – the policy only requires an itemized receipt for expenses **over $25**. A $20 taxi ride is below that threshold, so a receipt isn’t mandatory (though keeping one is always a good practice)."
+  },
+  {
+    "n": 35,
+    "question": "What's the daily meal cap when I'm travelling for work?",
+    "trace_id": "trace_260b12983b",
+    "answer": "The daily meal cap for business travel is **$75 USD**."
+  },
+  {
+    "n": 36,
+    "question": "How much can I spend on dinner specifically on a business trip?",
+    "trace_id": "trace_fbce11e5bc",
+    "answer": "You can spend up to **$40 USD** on dinner during a business trip."
+  },
+  {
+    "n": 37,
+    "question": "Can I expense a bottle of wine at a client dinner?",
+    "trace_id": "trace_2c4c8472d9",
+    "answer": "Yes – a bottle of wine can be reimbursed if it’s part of a client‑related meal.  It must be itemized separately on the expense report and you can only claim up to two drinks per person."
+  },
+  {
+    "n": 38,
+    "question": "What's the hotel cap per night in a high-cost city?",
+    "trace_id": "trace_9e80cad28e",
+    "answer": "The hotel cap per night in a high‑cost city is **$350 USD**."
+  },
+  {
+    "n": 39,
+    "question": "Should I book economy or premium economy for a 9-hour flight?",
+    "trace_id": "trace_248196081f",
+    "answer": "For a 9‑hour flight you should book **premium economy**. The policy states that flights over 6 hours should be booked in premium economy."
+  },
+  {
+    "n": 40,
+    "question": "I need to buy a 1,500 dollar monitor setup - whose approval do I need?",
+    "trace_id": "trace_05883f4bd7",
+    "answer": "For a $1,500 purchase, you’ll need **director‑level approval**.  \nAccording to the expense policy, any expense between $500 and $2,000 requires director approval (expenses under $500 need only manager approval)."
+  },
+  {
+    "n": 41,
+    "question": "Can I expense parking tickets I got while visiting a client?",
+    "trace_id": "trace_d9d6fc3378",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 42,
+    "question": "How long until I actually get paid back after my expense is approved?",
+    "trace_id": "trace_9b506a124e",
+    "answer": "Approved expenses are reimbursed via payroll within **2 pay cycles** of submission approval."
+  },
+  {
+    "n": 43,
+    "question": "Can I expense a team lunch with no client present?",
+    "trace_id": "trace_b998d1faea",
+    "answer": "Yes – you can submit a team lunch that doesn’t involve a client, but it must meet the policy limits:\n\n* **Cap:** $30 per person.  \n* **Approval:** Director‑level approval is required before the expense is submitted.  \n\nMake sure the receipt is itemized and the expense is entered in Expensify within the 30‑day window."
+  },
+  {
+    "n": 44,
+    "question": "When does my health insurance start after my first day?",
+    "trace_id": "trace_668a2c1eb2",
+    "answer": "Your health insurance begins on the first day of the month that follows your start date. There is no waiting period beyond that."
+  },
+  {
+    "n": 45,
+    "question": "What percentage of my health premium does the company cover?",
+    "trace_id": "trace_fa0fc252b8",
+    "answer": "The company covers **80 % of the employee’s premium for the base PPO plan** and **90 % of the employee’s premium for the high‑deductible plan with an HSA option**."
+  },
+  {
+    "n": 46,
+    "question": "How much does Solstice contribute to my HSA if I take the high-deductible plan?",
+    "trace_id": "trace_23fe94aa42",
+    "answer": "Solstice contributes **$500 per year** to your HSA if you enroll in the high‑deductible plan."
+  },
+  {
+    "n": 47,
+    "question": "What's the 401k match if I contribute 6 percent of my salary?",
+    "trace_id": "trace_d33a8fae48",
+    "answer": "A 6 % employee contribution earns a 5 % company match (i.e., 5 % of your base salary)."
+  },
+  {
+    "n": 48,
+    "question": "Does the 401k match vest immediately or is there a schedule?",
+    "trace_id": "trace_ec90b27d14",
+    "answer": "The 401(k) match vests immediately."
+  },
+  {
+    "n": 49,
+    "question": "Can I enroll in the 401k right away or do I have to wait?",
+    "trace_id": "trace_1ae6236890",
+    "answer": "You can enroll in the 401(k) plan immediately upon hire—there’s no waiting period."
+  },
+  {
+    "n": 50,
+    "question": "How much life insurance does the company give me automatically?",
+    "trace_id": "trace_f4c535aa46",
+    "answer": "The company automatically provides basic life insurance equal to **1× your annual salary**."
+  },
+  {
+    "n": 51,
+    "question": "What's the monthly wellness allowance and what can I spend it on?",
+    "trace_id": "trace_f4f738e73c",
+    "answer": "The monthly wellness allowance is **$50**.  \nYou can use it for:\n\n- Gym memberships  \n- Fitness classes  \n- Wellness apps  \n\n(Expenses must be submitted through the standard expense process.)"
+  },
+  {
+    "n": 52,
+    "question": "Can I put my annual learning budget toward a conference?",
+    "trace_id": "trace_fd343e7b73",
+    "answer": "Yes. The policy states that the annual learning budget of $1,000 can be used for courses, books, conferences, or certifications that are relevant to your role, provided you get manager approval."
+  },
+  {
+    "n": 53,
+    "question": "When is open enrollment and when does the new coverage start?",
+    "trace_id": "trace_1c9285436f",
+    "answer": "Open enrollment for health benefits takes place each November.  \nThe coverage that is selected during that period becomes effective on the following **January 1**."
+  },
+  {
+    "n": 54,
+    "question": "I'm getting married in March - can I change my benefit elections then?",
+    "trace_id": "trace_c1aade5d69",
+    "answer": "Yes. Marriage is a qualifying life event, so you can change your benefit elections within 30 days of your wedding."
+  },
+  {
+    "n": 55,
+    "question": "How often does Solstice do performance reviews?",
+    "trace_id": "trace_b3fea363af",
+    "answer": "Solstice conducts performance reviews twice a year—once in June for a developmental mid‑year check‑in, and again in December for the formal annual review that sets ratings, merit increases, and bonuses."
+  },
+  {
+    "n": 56,
+    "question": "Does the mid-year check-in affect my raise?",
+    "trace_id": "trace_158aa45992",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 57,
+    "question": "What are the five rating levels on the review scale?",
+    "trace_id": "trace_1aa7dc43ff",
+    "answer": "The five rating levels on the review scale are:\n\n1. Exceptional  \n2. Exceeds Expectations  \n3. Meets Expectations  \n4. Needs Improvement  \n5. Unsatisfactory"
+  },
+  {
+    "n": 58,
+    "question": "Are ratings compared across managers before they're final?",
+    "trace_id": "trace_076a0fc1cc",
+    "answer": "Yes.  The policy states that ratings are “calibrated across each department by managers and a People Operations partner before being finalized,” which means managers compare and adjust ratings against one another before the final rating is locked in."
+  },
+  {
+    "n": 59,
+    "question": "When is my self-assessment due relative to my manager's review?",
+    "trace_id": "trace_0acbf02c86",
+    "answer": "Your self‑assessment is due **two weeks before your manager’s written review is due**."
+  },
+  {
+    "n": 60,
+    "question": "What happens if I'm rated Needs Improvement?",
+    "trace_id": "trace_3fa2c17085",
+    "answer": "If you receive a **“Needs Improvement”** rating in the annual review, the company will typically place you on a **Performance Improvement Plan (PIP)**.  \n\nA PIP will:\n\n1. **Define specific, measurable goals** you need to achieve.  \n2. **Set a timeline**—usually 30 to 60 days—with a formal check‑in at the midpoint.  \n3. **Provide support** from your manager and, if needed, People Operations to help you meet those goals.  \n\nIf you fail to meet the PIP objectives by the end of the timeline, the company may proceed with termination. The PIP is designed to give you a clear path to improvement and a chance to demonstrate progress before any further action is taken."
+  },
+  {
+    "n": 61,
+    "question": "How long does a Performance Improvement Plan usually run?",
+    "trace_id": "trace_89e0707788",
+    "answer": "A Performance Improvement Plan typically runs for **30 to 60 days**."
+  },
+  {
+    "n": 62,
+    "question": "Can I be terminated if I don't meet my PIP goals?",
+    "trace_id": "trace_709ecbad81",
+    "answer": "Yes. According to the policy, if you fail to meet the goals set out in a Performance Improvement Plan (PIP) by the end of the specified timeline, termination may result."
+  },
+  {
+    "n": 63,
+    "question": "When will I find out my merit increase amount?",
+    "trace_id": "trace_a926e6d27e",
+    "answer": "You’ll receive your merit‑increase amount within 30 days of the annual review being finalized—usually in late January or early February."
+  },
+  {
+    "n": 64,
+    "question": "Can I get promoted outside the annual cycle?",
+    "trace_id": "trace_36c8839330",
+    "answer": "Yes. While promotions are normally considered during the annual review cycle, they can be processed off‑cycle if a VP approves it for an exceptional circumstance (such as a retention risk or a significant scope change)."
+  },
+  {
+    "n": 65,
+    "question": "How many weeks of paid parental leave do birthing parents get right now?",
+    "trace_id": "trace_e60d9ff896",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 66,
+    "question": "I'm the non-birthing parent - how much leave do I get?",
+    "trace_id": "trace_02caddcc04",
+    "answer": "As a non‑birthing parent, you are entitled to **10 weeks of paid parental leave** (effective January 1, 2026). This leave is paid at 100 % of your base salary and is in addition to any short‑term disability benefits that may apply."
+  },
+  {
+    "n": 67,
+    "question": "We're adopting a child in November - how much leave am I entitled to?",
+    "trace_id": "trace_c053166f84",
+    "answer": "You’re entitled to **8 weeks of paid parental leave** for the adoption.  \n(That’s the amount specified for non‑birthing parents in the original Parental Leave Policy, which is still in effect for an adoption occurring in November 2025.)"
+  },
+  {
+    "n": 68,
+    "question": "How long after my baby is born do I have to use my parental leave?",
+    "trace_id": "trace_f7b80e3e5c",
+    "answer": "You must take your parental leave within **12 months** of your baby’s birth."
+  },
+  {
+    "n": 69,
+    "question": "Can I split my parental leave into two separate blocks?",
+    "trace_id": "trace_b9287d208e",
+    "answer": "Yes. The policy allows parental leave to be taken continuously **or split into two blocks of at least 2 weeks each**, provided you obtain manager and HR approval for the split arrangement."
+  },
+  {
+    "n": 70,
+    "question": "Is parental leave paid at full salary?",
+    "trace_id": "trace_f2926c24ce",
+    "answer": "Yes. Parental leave is paid at 100 % of the employee’s base salary."
+  },
+  {
+    "n": 71,
+    "question": "Do I keep accruing PTO while I'm on paid parental leave?",
+    "trace_id": "trace_775a26a15b",
+    "answer": "Yes. According to the policy, PTO (and sick leave) **continue to accrue during paid parental leave weeks**."
+  },
+  {
+    "n": 72,
+    "question": "Am I guaranteed my same job when I come back from parental leave?",
+    "trace_id": "trace_a6d7bf9c4f",
+    "answer": "Yes. According to the Parental Leave Policy, employees who return from parental leave are guaranteed the same or an equivalent role, level, and compensation as they had before the leave began."
+  },
+  {
+    "n": 73,
+    "question": "I'm part-time at 25 hours a week - do I get any parental leave?",
+    "trace_id": "trace_217a812eaf",
+    "answer": "Yes.  \nThe policy states that **part‑time employees who work at least 20 hours per week are eligible for paid parental leave on a pro‑rated basis**. Since you work 25 hours per week, you qualify for pro‑rated parental leave. The exact number of weeks you receive will be calculated proportionally to your hours relative to a full‑time schedule."
+  },
+  {
+    "n": 74,
+    "question": "How much notice should I give before starting parental leave?",
+    "trace_id": "trace_88bb90969a",
+    "answer": "You should give your manager and People Operations **at least 30 days’ notice** before the expected start of your parental leave (when possible, such as for a birth). For unplanned placements (e.g., some adoptions or foster placements), you should notify them **as soon as practicable**."
+  },
+  {
+    "n": 75,
+    "question": "How much notice do I need to give if I resign as an individual contributor?",
+    "trace_id": "trace_de126b46f1",
+    "answer": "You need to give at least **two weeks’ written notice** if you resign as an individual contributor."
+  },
+  {
+    "n": 76,
+    "question": "I'm a manager - is my notice period different?",
+    "trace_id": "trace_d6eeb0e2b7",
+    "answer": "Yes. According to the Offboarding and Termination Policy, managers (and any role above individual contributor) are required to give **4 weeks’ written notice** when resigning, whereas individual contributors are asked for at least 2 weeks."
+  },
+  {
+    "n": 77,
+    "question": "When exactly do my health benefits end after I leave?",
+    "trace_id": "trace_277f97991c",
+    "answer": "Health benefits end on the **last day of the month in which your employment ends**. After that, you may be eligible to continue coverage through COBRA (or the equivalent local program) at your own cost."
+  },
+  {
+    "n": 78,
+    "question": "Do I get paid out for unused PTO when I leave?",
+    "trace_id": "trace_ecd60b4bb0",
+    "answer": "Yes.  According to the Leave and Time Off Policy, your final paycheck will include payment for any accrued and unused PTO, in accordance with state or local law."
+  },
+  {
+    "n": 79,
+    "question": "When do I have to hand back my laptop and badge?",
+    "trace_id": "trace_df8f9e3e49",
+    "answer": "You must return your laptop, badge, and any other company equipment on or before your last working day. IT will disable your system access at the end of that day (or immediately if the termination is for cause)."
+  },
+  {
+    "n": 80,
+    "question": "Is the exit interview mandatory?",
+    "trace_id": "trace_a84e831af9",
+    "answer": "No – the exit interview is optional. People Operations offers it to all departing employees, but participation is voluntary."
+  },
+  {
+    "n": 81,
+    "question": "If I resign properly, can I be rehired later?",
+    "trace_id": "trace_3a89efd65a",
+    "answer": "Yes. According to the policy, employees who resign in good standing and give the required notice are generally eligible for rehire. Employees who are terminated for cause, however, are marked “not eligible for rehire.”"
+  },
+  {
+    "n": 82,
+    "question": "Am I eligible for overtime if I'm salaried and exempt?",
+    "trace_id": "trace_93ae53a2f6",
+    "answer": "No. According to the policy, exempt employees (which includes most salaried professional roles) are not eligible for overtime pay."
+  },
+  {
+    "n": 83,
+    "question": "What's the overtime rate for non-exempt employees?",
+    "trace_id": "trace_1596fc8b95",
+    "answer": "The overtime rate for non‑exempt employees is **1.5 × their regular hourly rate** for hours worked beyond 40 in a work week."
+  },
+  {
+    "n": 84,
+    "question": "What if I work overtime without getting it approved first?",
+    "trace_id": "trace_2cdffeba58",
+    "answer": "If you work overtime without prior approval, you will still be paid the overtime rate (1.5 × your regular hourly rate) for those hours. However, the policy states that unapproved overtime may trigger a conversation with your manager about scheduling and coverage. It’s not a disciplinary violation, but it is expected that overtime be pre‑approved whenever possible."
+  },
+  {
+    "n": 85,
+    "question": "How long is my unpaid meal break on a 7-hour shift?",
+    "trace_id": "trace_87636b219f",
+    "answer": "Your unpaid meal break is **30 minutes** on a 7‑hour shift."
+  },
+  {
+    "n": 86,
+    "question": "What's the weekly stipend for being on the on-call rotation?",
+    "trace_id": "trace_8620201a5e",
+    "answer": "The weekly stipend for being on the on‑call rotation is **$100 USD per week**."
+  },
+  {
+    "n": 87,
+    "question": "I'm exempt and got paged for an hour at midnight - do I get anything?",
+    "trace_id": "trace_b6f849bb05",
+    "answer": "Yes. Under the On‑Call Work policy, an exempt employee who is called in for more than 30 minutes of active work outside normal hours receives a flat call‑out fee of **$75** for that incident. If you’re also on the formal on‑call rotation, you’ll still receive the regular **$100 per‑week on‑call stipend** in addition to the $75 call‑out fee."
+  },
+  {
+    "n": 88,
+    "question": "What happens if someone fudges their timesheet?",
+    "trace_id": "trace_982d49c99e",
+    "answer": "Falsifying time records is a violation of Solstice Analytics’ Code of Conduct.  It can lead to disciplinary action—including a verbal or written warning, a performance‑improvement plan, suspension, or even termination—depending on the severity of the offense."
+  },
+  {
+    "n": 89,
+    "question": "Does Solstice offer pet insurance?",
+    "trace_id": "trace_752497350e",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 90,
+    "question": "Can I expense my Peloton membership under the wellness benefit?",
+    "trace_id": "trace_927b28c075",
+    "answer": "Yes.  \nThe Wellness Benefit allows employees to expense up to $50 per month for **gym memberships, fitness classes, or wellness apps**. A Peloton subscription is considered a wellness app, so you can submit it for reimbursement—provided you follow the standard expense process (Expensify, receipts, etc.) and stay within the $50/month limit."
+  },
+  {
+    "n": 91,
+    "question": "Is there a sabbatical policy after five years?",
+    "trace_id": "trace_d718461b03",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 92,
+    "question": "How many vacation days do contractors get?",
+    "trace_id": "trace_2a036e7ebb",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 93,
+    "question": "What's the tuition reimbursement for a part-time MBA?",
+    "trace_id": "trace_f8bcb68a43",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 94,
+    "question": "My partner and I both work here and I just became his manager - is that a problem?",
+    "trace_id": "trace_eec181480f",
+    "answer": "Yes, that is a conflict of interest under the company’s policy.  \nThe policy states that romantic relationships with direct reports must be disclosed, and undisclosed conflicts can lead to disciplinary action. As your partner is now your direct report, you should:\n\n1. **Disclose** the relationship to People Operations (or the appropriate HR contact) as soon as possible.  \n2. **Follow any additional steps** the company requires—this may include re‑assigning the reporting line or having a neutral manager oversee the relationship.  \n3. **Document** the disclosure and any actions taken to ensure compliance.\n\nIf the relationship is not disclosed, it could result in disciplinary action, up to and including termination."
+  },
+  {
+    "n": 95,
+    "question": "I'm on a PIP and just found out I'm pregnant - what happens to my leave?",
+    "trace_id": "trace_8a6a12549f",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 96,
+    "question": "If I go on parental leave during the review cycle, do I still get rated?",
+    "trace_id": "trace_1abdfb76d2",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 97,
+    "question": "Can I use my wellness benefit and my learning budget on the same yoga teacher training?",
+    "trace_id": "trace_523feb4a2e",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 98,
+    "question": "I'm hybrid but my team lead wants me in 4 days a week - can they do that?",
+    "trace_id": "trace_f311ace149",
+    "answer": "Yes. The policy states that a hybrid employee must work in the office **at least three days a week**, and the specific days are set by the team lead. Therefore, your team lead can require you to be in the office four days a week, and that would still be within the policy’s guidelines."
+  },
+  {
+    "n": 99,
+    "question": "Hi, my name is Priya Raghavan, employee ID: 4471 - how many PTO days do I have left this year?",
+    "trace_id": "trace_a45460069a",
+    "answer": "I cannot answer this based on the provided documents."
+  },
+  {
+    "n": 100,
+    "question": "This is Dev Anand (dev.anand@solstice.co). My manager Ravi Kumar approved my remote request - what stipend do I get?",
+    "trace_id": "trace_b986be03ae",
+    "answer": "You’ll receive the updated stipend amounts from the 2026 addendum:\n\n- **One‑time home‑office equipment stipend:** **$600 USD** (or the local‑currency equivalent)  \n- **Monthly internet stipend:** **$35 USD** (or the local‑currency equivalent)"
+  }
+]

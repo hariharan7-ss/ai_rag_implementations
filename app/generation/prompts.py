@@ -20,3 +20,7 @@ Context:
 
 Questions:
 """
+
+# Week 5: every trace records which prompt produced it. Bump this string
+# whenever RAG_PROMPT_TEMPLATE changes, so traces stay attributable.
+RAG_PROMPT_VERSION = "hr-rag-v1"

@@ -1,0 +1,50 @@
+{
+  "method": "curated demo set - all 10, not sampled",
+  "seed": null,
+  "n": 10,
+  "frame_file": "data/run_results_demo_week5.json",
+  "frame_size": 10,
+  "sampling_rate": 1.0,
+  "selected": [
+    {
+      "trace_id": "trace_5d6c5b7d2c",
+      "query": "How many PTO days do I get per year, and how many can I roll over to next year?"
+    },
+    {
+      "trace_id": "trace_f8d4cad9b0",
+      "query": "What's the daily meal limit when I'm traveling for work?"
+    },
+    {
+      "trace_id": "trace_9e6109030d",
+      "query": "How much does Solstice match on my 401(k) if I contribute 6%?"
+    },
+    {
+      "trace_id": "trace_f5dcb6e99b",
+      "query": "When does my health insurance kick in after I start?"
+    },
+    {
+      "trace_id": "trace_f5421fbec1",
+      "query": "How often do I get a performance review, and does the mid-year one affect my raise?"
+    },
+    {
+      "trace_id": "trace_9c27b41de1",
+      "query": "How long after a business trip do I have to submit my expenses?"
+    },
+    {
+      "trace_id": "trace_d44c2bb057",
+      "query": "Who do I talk to if a coworker is harassing me?"
+    },
+    {
+      "trace_id": "trace_4d97906dff",
+      "query": "How much notice do I need to give before resigning if I'm an individual contributor?"
+    },
+    {
+      "trace_id": "trace_92b118057d",
+      "query": "Am I eligible for overtime pay if I'm a salaried exempt employee?"
+    },
+    {
+      "trace_id": "trace_25f2e070c7",
+      "query": "What's the stipend if I'm on the on-call rotation this week?"
+    }
+  ]
+}
