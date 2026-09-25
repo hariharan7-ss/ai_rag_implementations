@@ -1,0 +1,18 @@
+You are grading an HR assistant's answer about the Solstice Analytics employee handbook.
+
+Question:
+{question}
+
+Reference (what the handbook says):
+{reference}
+
+Assistant's answer:
+{answer}
+
+Judge ONE thing only: is the policy the answer gives CORRECT?
+PASS if every policy fact the answer states agrees with the reference and it gives the user the fact their question is about.
+FAIL if it states a wrong or outdated figure, rule or reporting channel, contradicts the reference, leaves out the fact the question is asking for, or refuses to answer.
+
+Do not grade citations, section numbers, effective dates, formatting, tone or length - those are checked elsewhere.
+
+Give one sentence of reasoning, then a final line that is exactly "VERDICT: PASS" or "VERDICT: FAIL".

@@ -1,0 +1,20 @@
+You are grading an HR assistant's answer about the Solstice Analytics employee handbook.
+
+Question:
+{question}
+
+Reference (what the handbook says):
+{reference}
+
+Assistant's answer:
+{answer}
+
+Grade the answer against ALL of the following criteria:
+1. Correctness: every policy fact it states agrees with the reference, and it does not omit or contradict the fact the question is about.
+2. It cites a policy section (e.g. "Parental Leave Policy, Section 2") and that section exists in the handbook.
+3. It states which handbook version it is using (the policy's effective date).
+4. If the question asks for an amount, duration or notice period, the figure is given as a number.
+5. If the question is outside the handbook or about another jurisdiction's law, it refuses instead of answering.
+6. If the question IS answered by the handbook, it does not refuse.
+
+Give one sentence of reasoning, then a final line that is exactly "VERDICT: PASS" (all criteria met) or "VERDICT: FAIL".

@@ -68,6 +68,14 @@ class PineconeStore:
             })
         return results
 
+    def fetch_chunks(self, chunk_ids: List[str]) -> Dict[str, Dict[str, Any]]:
+        """Metadata of specific chunks by chunk_id (missing ids are simply absent)."""
+        if not chunk_ids:
+            return {}
+        point_ids = {str(uuid.uuid5(uuid.NAMESPACE_DNS, cid)): cid for cid in chunk_ids}
+        response = self.index.fetch(ids=list(point_ids), namespace=self.namespace)
+        return {point_ids[pid]: vec.metadata for pid, vec in response.vectors.items() if pid in point_ids}
+
     def delete_document(self, document_id: str):
         try:
             self.index.delete(filter={"document_id": {"$eq": document_id}}, namespace=self.namespace)

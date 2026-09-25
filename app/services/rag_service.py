@@ -1,13 +1,40 @@
-from typing import Dict, Any
+import os
+import re
+from datetime import date
+from typing import Dict, Any, List
 from app.services.retrieval_service import retrieval_service
+from app.vectorstore.pinecone_store import pinecone_store
 from app.services.trace_logger import log_trace
 from app.generation.llm import generate_response_full
-from app.generation.prompts import RAG_PROMPT_TEMPLATE, RAG_PROMPT_VERSION
+from app.generation.prompts import RAG_PROMPT_TEMPLATE, RAG_PROMPT_VERSION, REFUSAL
 
 LLM_MODEL = "openai/gpt-oss-20b"
 
 # Recorded in every trace so retrieval can be reasoned about from the trace alone.
 RETRIEVAL_PARAMS = {"initial_k": 10, "final_k": 4, "strategy": "vector+rerank"}
+
+_HEADER_END = re.compile(r"\s(?:Owner:|Applies to:|1\.\s)")
+
+
+def _document_labels(retrieved: List[Dict[str, Any]]) -> Dict[str, str]:
+    """document_id -> its header ("<title> Effective: <date>"), read from the doc's chunk 0.
+
+    A mid-document chunk does not say which policy or which version it belongs to,
+    so the model could not cite either. Chunk 0 of every document starts with that
+    header, and chunk ids are deterministic, so one fetch recovers it.
+    """
+    doc_ids = {r.get("payload", {}).get("document_id") for r in retrieved} - {None}
+    try:
+        heads = pinecone_store.fetch_chunks([f"{d}_chunk_0" for d in doc_ids])
+    except Exception:
+        heads = {}
+    labels = {}
+    for d in doc_ids:
+        text = (heads.get(f"{d}_chunk_0") or {}).get("text", "")
+        m = _HEADER_END.search(text)
+        header = (text[: m.start()] if m else text[:120]).replace("�", "-").strip()
+        labels[d] = header
+    return labels
 
 
 class RAGService:
@@ -20,11 +47,13 @@ class RAGService:
 
         context_parts = []
         sources = []
+        labels = _document_labels(retrieved)
 
         for r in retrieved:
             payload = r.get("payload", {})
             text = payload.get("text", "")
-            context_parts.append(text)
+            label = labels.get(payload.get("document_id")) or payload.get("source") or "unknown"
+            context_parts.append(f"[Document: {label}]\n{text}")
 
             source_info = {
                 "document_id": payload.get("document_id"),
@@ -37,7 +66,9 @@ class RAGService:
                 sources.append(source_info)
 
         context = "\n\n---\n\n".join(context_parts)
-        prompt = RAG_PROMPT_TEMPLATE.format(context=context, question=query)
+        # RAG_TODAY pins the date for reproducible evals; otherwise the real date.
+        today = os.environ.get("RAG_TODAY") or date.today().isoformat()
+        prompt = RAG_PROMPT_TEMPLATE.format(context=context, question=query, today=today, refusal=REFUSAL)
         gen = generate_response_full(prompt, model=LLM_MODEL)
         answer = gen["text"]
 

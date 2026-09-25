@@ -12,3 +12,6 @@ venv/
 # IDE
 .vscode/
 .idea/
+
+# week 6 eval: resume checkpoints only
+eval/week6/runs/*.partial.json

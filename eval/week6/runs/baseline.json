@@ -1,0 +1,705 @@
+{
+  "label": "baseline",
+  "created_at": "2026-09-23T14:29:31.722085+00:00",
+  "app_prompt_version": "hr-rag-v1",
+  "answers_from": "baseline",
+  "judge_version": null,
+  "judge_model": null,
+  "labels_commit": null,
+  "n_assertions": 5,
+  "n_judged_criteria": 0,
+  "rows": [
+    {
+      "id": "c01",
+      "mode": "contamination",
+      "question": "How much notice do I need to give before resigning if I'm an individual contributor?",
+      "expect": "answer",
+      "regression_of": "trace_e0db8013fc",
+      "answer": "You need to give at least **two weeks’ written notice** before resigning if you are an individual contributor.",
+      "answer_sha": "3c70b11a9f105193",
+      "trace_id": "trace_436aa67f82",
+      "sources": [
+        "08_offboarding_termination_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": false,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "c02",
+      "mode": "contamination",
+      "question": "Who do I talk to if a coworker is harassing me?",
+      "expect": "answer",
+      "regression_of": "trace_761b18eec5",
+      "answer": "You should report the harassment to one of the following:\n\n1. **Your manager**  \n2. **A People Operations team member**  \n3. **The anonymous Ethics Hotline** available on the internal portal  \n\nAll of these options are confidential, and retaliation against a good‑faith reporter is prohibited.",
+      "answer_sha": "00abfce7a6624beb",
+      "trace_id": "trace_4e616bf6de",
+      "sources": [
+        "03_code_of_conduct.txt",
+        "09_working_hours_overtime_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "c03",
+      "mode": "contamination",
+      "question": "My partner and I both work here and I just became his manager after a reorg — is that a problem?",
+      "expect": "answer",
+      "regression_of": "trace_2da750f79d",
+      "answer": "Yes. According to the company’s conflict‑of‑interest policy, any romantic relationship with a direct report must be disclosed. Undisclosed relationships can be considered a conflict of interest and may lead to disciplinary action. You should notify People Operations (or the appropriate HR contact) as soon as possible and follow the company’s reporting and disclosure procedures.",
+      "answer_sha": "172eb74dcd4d02ed",
+      "trace_id": "trace_11b9e2c131",
+      "sources": [
+        "03_code_of_conduct.txt",
+        "02_remote_hybrid_work_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "c04",
+      "mode": "contamination",
+      "question": "If I file a harassment report, how quickly will People Ops respond and how long does the investigation take?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "People Operations will acknowledge a harassment report within **2 business days** and will aim to complete an **initial investigation within 15 business days**. During an active investigation, the reporting employee will receive status updates at least every two weeks.",
+      "answer_sha": "3aac6d7f8694f725",
+      "trace_id": "trace_5a74394975",
+      "sources": [
+        "03_code_of_conduct.txt",
+        "06_performance_review_process.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "c05",
+      "mode": "contamination",
+      "question": "Does Solstice offer pet insurance for employees?",
+      "expect": "refuse",
+      "regression_of": null,
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_c3dc91fe27",
+      "sources": [
+        "05_benefits_overview.txt",
+        "01_leave_and_time_off_policy.txt",
+        "09_working_hours_overtime_policy.txt",
+        "04_expense_reimbursement_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": true,
+        "no_false_refusal": null,
+        "figure_numeric": null,
+        "section_ref_resolves": null,
+        "version_cited": null
+      },
+      "judge": null,
+      "pass": true
+    },
+    {
+      "id": "c06",
+      "mode": "contamination",
+      "question": "How many weeks of maternity leave does India's Maternity Benefit Act guarantee?",
+      "expect": "refuse",
+      "regression_of": null,
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_04bb083c43",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": true,
+        "no_false_refusal": null,
+        "figure_numeric": null,
+        "section_ref_resolves": null,
+        "version_cited": null
+      },
+      "judge": null,
+      "pass": true
+    },
+    {
+      "id": "c07",
+      "mode": "contamination",
+      "question": "What notice does the UK Employment Rights Act require an employer to give someone with five years of service?",
+      "expect": "refuse",
+      "regression_of": null,
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_2224965b43",
+      "sources": [
+        "01_leave_and_time_off_policy.txt",
+        "07_parental_leave_policy.txt",
+        "08_offboarding_termination_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": true,
+        "no_false_refusal": null,
+        "figure_numeric": null,
+        "section_ref_resolves": null,
+        "version_cited": null
+      },
+      "judge": null,
+      "pass": true
+    },
+    {
+      "id": "c08",
+      "mode": "contamination",
+      "question": "Is there a sabbatical policy after five years?",
+      "expect": "refuse",
+      "regression_of": null,
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_b1d2eb955c",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "08_offboarding_termination_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": true,
+        "no_false_refusal": null,
+        "figure_numeric": null,
+        "section_ref_resolves": null,
+        "version_cited": null
+      },
+      "judge": null,
+      "pass": true
+    },
+    {
+      "id": "s01",
+      "mode": "stale_addendum",
+      "question": "How many weeks of paid leave do I get as the birthing parent having a baby this year?",
+      "expect": "answer",
+      "regression_of": "trace_5a94a26b63",
+      "answer": "According to the most recent policy addendum (effective January 1, 2026), birthing parents receive **20 weeks of paid parental leave**. If your birth occurs before that effective date, the earlier policy would apply, which provides 16 weeks.",
+      "answer_sha": "139bc5d2fee56058",
+      "trace_id": "trace_b08ebd240a",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "10_policy_addendum_2026.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": true
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "s02",
+      "mode": "stale_addendum",
+      "question": "I'm adopting a child — how much parental leave am I entitled to right now, and by when do I need to use it?",
+      "expect": "answer",
+      "regression_of": "trace_1650e61840",
+      "answer": "You’re entitled to **10 weeks of paid parental leave** for an adoption (the policy now lists 20 weeks for birthing parents and 10 weeks for non‑birthing parents).  \n\nThe leave must be taken **within 12 months of the adoption date**.  It can be taken continuously or split into two blocks of at least 2 weeks each, with manager and People Operations approval.",
+      "answer_sha": "bd354e30b6094b7e",
+      "trace_id": "trace_d01d1497bf",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "10_policy_addendum_2026.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "s03",
+      "mode": "stale_addendum",
+      "question": "How many weeks of paid parental leave do birthing parents get right now?",
+      "expect": "answer",
+      "regression_of": "trace_e60d9ff896",
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_98e368fd70",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "10_policy_addendum_2026.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": false,
+        "figure_numeric": false,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "s04",
+      "mode": "stale_addendum",
+      "question": "What's the home office equipment stipend for remote employees right now?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "The current home‑office equipment stipend for remote employees is **$600 USD** (or the local currency equivalent).",
+      "answer_sha": "b4983e1b529510a1",
+      "trace_id": "trace_88e8669f5c",
+      "sources": [
+        "02_remote_hybrid_work_policy.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "s05",
+      "mode": "stale_addendum",
+      "question": "How much is the monthly internet stipend if I work remotely?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "The monthly internet stipend for remote employees is **$35 USD**.",
+      "answer_sha": "67f9b96935b70656",
+      "trace_id": "trace_5784c6abda",
+      "sources": [
+        "10_policy_addendum_2026.txt",
+        "02_remote_hybrid_work_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "f01",
+      "mode": "false_refusal",
+      "question": "Am I eligible for overtime pay if I'm a salaried exempt employee?",
+      "expect": "answer",
+      "regression_of": "trace_4695183e2d",
+      "answer": "No. According to the policy, exempt employees—most salaried professional roles—are not eligible for overtime pay.",
+      "answer_sha": "dd360d2e0da953f3",
+      "trace_id": "trace_2a25c0c6e0",
+      "sources": [
+        "09_working_hours_overtime_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "f02",
+      "mode": "false_refusal",
+      "question": "I want to work from my home country (different from where I'm employed) for a month while visiting family — what do I need to do?",
+      "expect": "answer",
+      "regression_of": "trace_471205cb64",
+      "answer": "To work from your home country for a full month (≈ 20 business days) you must:\n\n1. **Obtain prior written approval**  \n   * Submit a request to **People Operations** and **Legal** for permission to work remotely from abroad.  \n   * The approval must be in writing (email or formal form) and include the exact dates you will be working from that country.\n\n2. **Follow the standard remote‑work security and availability rules**  \n   * Use your company‑issued laptop with disk encryption.  \n   * Connect to the company VPN at all times and avoid public Wi‑Fi without the VPN.  \n   * Be reachable during the core hours of 10:00 – 15:00 in your local team’s primary time zone (unless you’re on approved PTO or sick leave).\n\n3. **Keep payroll and benefits in mind**  \n   * Unapproved extended work‑from‑abroad can affect payroll and benefits eligibility, so make sure the approval is obtained before you start.\n\nIf you’re only planning to work for fewer than 15 consecutive business days, no approval is required, but for a month you must go through the People Ops/Legal approval process.",
+      "answer_sha": "c73ffd446b544373",
+      "trace_id": "trace_8fc74d8931",
+      "sources": [
+        "02_remote_hybrid_work_policy.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "f03",
+      "mode": "false_refusal",
+      "question": "I'm a new hire - can I start working remotely right away?",
+      "expect": "answer",
+      "regression_of": "trace_876552f842",
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_c185db8395",
+      "sources": [
+        "02_remote_hybrid_work_policy.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": false,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "f04",
+      "mode": "false_refusal",
+      "question": "Does the mid-year check-in affect my raise?",
+      "expect": "answer",
+      "regression_of": "trace_158aa45992",
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_de28253a07",
+      "sources": [
+        "06_performance_review_process.txt",
+        "09_working_hours_overtime_policy.txt",
+        "07_parental_leave_policy.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": false,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "f05",
+      "mode": "false_refusal",
+      "question": "I've used up all my PTO and sick days but need more time off - what are my options?",
+      "expect": "answer",
+      "regression_of": "trace_5158c673ef",
+      "answer": "You can request **unpaid leave**.  \nAccording to the policy, once you’ve used all of your PTO and sick days you may apply for up to **10 business days of unpaid leave per year**. The request must be approved by your manager and HR, and you should submit it at least **two weeks in advance** (unless it’s an emergency).  \n\nIf your situation falls under another specific leave category (e.g., bereavement, parental, or other special leave), you may also be eligible for those, but the policy only lists unpaid leave as the general option once PTO and sick days are exhausted.",
+      "answer_sha": "d8d19aed0e24feb8",
+      "trace_id": "trace_f06f57a86a",
+      "sources": [
+        "01_leave_and_time_off_policy.txt",
+        "08_offboarding_termination_policy.txt",
+        "07_parental_leave_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "f06",
+      "mode": "false_refusal",
+      "question": "Can I expense parking tickets I got while visiting a client?",
+      "expect": "answer",
+      "regression_of": "trace_d9d6fc3378",
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_ed38e315be",
+      "sources": [
+        "04_expense_reimbursement_policy.txt",
+        "03_code_of_conduct.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": false,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "k01",
+      "mode": "chunk_severed",
+      "question": "If I'm on paid parental leave, do I keep accruing PTO?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "Yes. According to the policy, PTO continues to accrue during paid parental‑leave weeks.",
+      "answer_sha": "f76489b2d1e4b8af",
+      "trace_id": "trace_a509e7e5bc",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "k02",
+      "mode": "chunk_severed",
+      "question": "When do I get my final paycheck after I resign, and does it include my unused PTO?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "Your final paycheck will be issued in accordance with state or local law.  In most cases it comes out in the final pay cycle (or immediately at the time of termination if the law requires it).  The paycheck includes any accrued and unused PTO, as outlined in the Leave and Time‑Off Policy.",
+      "answer_sha": "1ba8e0ebafe2d7ab",
+      "trace_id": "trace_77d4c31aee",
+      "sources": [
+        "08_offboarding_termination_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "k03",
+      "mode": "chunk_severed",
+      "question": "My team lets me set my own schedule — which hours do I still have to be reachable?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "I cannot answer this based on the provided documents.",
+      "answer_sha": "52e2fa9a338a6c80",
+      "trace_id": "trace_ffd143af72",
+      "sources": [
+        "09_working_hours_overtime_policy.txt",
+        "09_working_hours_overtime_policy.txt",
+        "01_leave_and_time_off_policy.txt",
+        "02_remote_hybrid_work_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": false,
+        "figure_numeric": false,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "k04",
+      "mode": "chunk_severed",
+      "question": "Can I split my parental leave into two separate chunks?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "Yes. The policy allows parental leave to be taken continuously or split into two blocks of at least 2 weeks each, provided you obtain manager and HR approval for the split arrangement.",
+      "answer_sha": "90c40384e26bfe87",
+      "trace_id": "trace_1bf28b9f4e",
+      "sources": [
+        "07_parental_leave_policy.txt",
+        "07_parental_leave_policy.txt",
+        "10_policy_addendum_2026.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "k05",
+      "mode": "chunk_severed",
+      "question": "I'm exempt and on the on-call rotation; if I get paged for an hour-long incident at night, what am I paid?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "You’ll receive the flat call‑out fee for exempt staff: **$75 USD** for that hour‑long incident.  \nIn addition, you’re entitled to the regular on‑call stipend of **$100 USD per week** for being on the rotation.",
+      "answer_sha": "e135d89c5bd632b6",
+      "trace_id": "trace_e15a1f4120",
+      "sources": [
+        "09_working_hours_overtime_policy.txt",
+        "09_working_hours_overtime_policy.txt",
+        "02_remote_hybrid_work_policy.txt",
+        "02_remote_hybrid_work_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "n01",
+      "mode": "no_attribution",
+      "question": "Can I expense my Peloton subscription?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "Yes. The policy allows employees to expense up to $50 per month for gym memberships, fitness classes, or wellness apps. A Peloton subscription falls under “wellness apps,” so you can submit it for reimbursement (subject to the usual receipt and approval requirements).",
+      "answer_sha": "2ed319ccbb030c79",
+      "trace_id": "trace_0a5fc34cce",
+      "sources": [
+        "04_expense_reimbursement_policy.txt",
+        "04_expense_reimbursement_policy.txt",
+        "04_expense_reimbursement_policy.txt",
+        "05_benefits_overview.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "n02",
+      "mode": "no_attribution",
+      "question": "What's the nightly hotel limit on a business trip to a high-cost city?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "The nightly hotel limit for a business trip to a high‑cost city is **$350 USD per night**.",
+      "answer_sha": "c73c8e6e722c1775",
+      "trace_id": "trace_b7ce0e6d44",
+      "sources": [
+        "04_expense_reimbursement_policy.txt",
+        "04_expense_reimbursement_policy.txt",
+        "02_remote_hybrid_work_policy.txt",
+        "10_policy_addendum_2026.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "n03",
+      "mode": "no_attribution",
+      "question": "How much does Solstice match on my 401(k) if I contribute 6%?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "Solstice matches 5 % of your salary when you contribute 6 % to your 401(k).",
+      "answer_sha": "5c7e331a37b87635",
+      "trace_id": "trace_b6e08a8ea0",
+      "sources": [
+        "05_benefits_overview.txt",
+        "05_benefits_overview.txt",
+        "04_expense_reimbursement_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": true,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "n04",
+      "mode": "no_attribution",
+      "question": "What happens to my health benefits the day I leave the company?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "Health coverage stops at the end of the month in which you leave.  Your last day of employment is the final day of that month, and your health benefits terminate then.  After that, you can opt to keep coverage through COBRA (or the local equivalent) at your own expense, and People Operations will give you the details within 14 days of your termination.",
+      "answer_sha": "eb0a8199ba4798d9",
+      "trace_id": "trace_48a7972952",
+      "sources": [
+        "08_offboarding_termination_policy.txt",
+        "07_parental_leave_policy.txt",
+        "01_leave_and_time_off_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": null,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    },
+    {
+      "id": "n05",
+      "mode": "no_attribution",
+      "question": "How much notice should I give before resigning if I'm a manager?",
+      "expect": "answer",
+      "regression_of": null,
+      "answer": "You should give at least **four weeks’ written notice** before resigning if you are a manager.",
+      "answer_sha": "57034fc1713e80bb",
+      "trace_id": "trace_aa572c12b1",
+      "sources": [
+        "08_offboarding_termination_policy.txt",
+        "01_leave_and_time_off_policy.txt",
+        "07_parental_leave_policy.txt",
+        "01_leave_and_time_off_policy.txt"
+      ],
+      "assertions": {
+        "refusal_path": null,
+        "no_false_refusal": true,
+        "figure_numeric": false,
+        "section_ref_resolves": false,
+        "version_cited": false
+      },
+      "judge": null,
+      "pass": false
+    }
+  ]
+}
