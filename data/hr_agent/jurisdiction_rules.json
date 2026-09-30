@@ -1,0 +1,37 @@
+{
+  "_note": "Solstice Analytics - Local Jurisdiction Supplement (synthetic, loosely modelled on local statute; not legal advice). Each rule overrides or adds to the company-wide handbook for one jurisdiction and one topic. Deliberately NOT part of the handbook search corpus: get_jurisdiction_rules is the only way to read it.",
+  "document": "Local Jurisdiction Supplement",
+  "effective": "January 1, 2026",
+  "rules": {
+    "UK": {
+      "notice_period": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1).",
+      "annual_leave": "UK employees receive 25 days of PTO per calendar year (replaces the company-wide 18 days), accrued monthly, plus UK bank holidays. Carry-over follows the company-wide handbook (maximum 5 days).",
+      "sick_leave": "No local override on paid days: the company-wide 10 sick days apply. Statutory Sick Pay applies once company sick days are used.",
+      "parental_leave": "No local override: the company-wide Parental Leave Policy and its latest Addendum apply."
+    },
+    "DE": {
+      "notice_period": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month.",
+      "annual_leave": "German employees receive 30 days of PTO per calendar year (replaces the company-wide 18 days). Unused days carry over until March 31 of the next year, then lapse. Transfers into Germany: in the calendar year an employee transfers in from another Solstice jurisdiction, that year's entitlement is pro-rated by full calendar months - months before the transfer at the previous jurisdiction's annual PTO figure, months from the transfer date at 30 days.",
+      "sick_leave": "Continued full pay for up to 6 weeks per illness from the 5th week of employment (replaces the company-wide 10-day limit). No company sick pay in the first 4 weeks of employment.",
+      "parental_leave": "No local override on the paid weeks: the company-wide Parental Leave Policy and its latest Addendum apply. Statutory unpaid parental leave (Elternzeit) is available in addition."
+    },
+    "US-CA": {
+      "notice_period": "At-will employment: no statutory minimum notice for either party. The notice the company asks a resigning employee to give is set by the company-wide handbook (Offboarding and Termination Policy, Section 1). Final pay is due immediately on involuntary termination, and within 72 hours on resignation without notice.",
+      "annual_leave": "The company-wide 18 days of PTO apply, but forfeiture is prohibited: the company-wide rule that forfeits unused PTO above 5 days on December 31 does not apply in California. All unused PTO carries over, subject to an accrual cap of 27 days (1.5x the annual entitlement).",
+      "sick_leave": "No local override: the company-wide 10 sick days exceed the state minimum of 5 days (40 hours).",
+      "parental_leave": "No local override on the paid weeks: the company-wide Parental Leave Policy and its latest Addendum apply."
+    },
+    "US-NY": {
+      "notice_period": "At-will employment: no statutory minimum notice for either party. The notice the company asks a resigning employee to give is set by the company-wide handbook (Offboarding and Termination Policy, Section 1). Final pay is due by the next regular payday.",
+      "annual_leave": "No local override: the company-wide PTO rules apply (18 days per year; at most 5 unused days carry over, the rest are forfeited on December 31).",
+      "sick_leave": "No local override: the company-wide 10 sick days exceed the state minimum of 7 days (56 hours).",
+      "parental_leave": "No local override on the paid weeks: the company-wide Parental Leave Policy and its latest Addendum apply."
+    },
+    "IN-KA": {
+      "notice_period": "Probation is the first 6 months of employment; during probation either party may end employment with 15 days notice. After confirmation: 60 days notice either party, or pay in lieu of notice.",
+      "annual_leave": "The company-wide 18 days of PTO apply. Unused PTO may be carried forward up to a total balance of 30 days.",
+      "sick_leave": "12 paid sick days per calendar year (replaces the company-wide 10).",
+      "parental_leave": "No local override on the paid weeks for non-birthing parents. Birthing parents receive the greater of 26 weeks (statutory) or the company-wide figure."
+    }
+  }
+}

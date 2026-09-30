@@ -1,0 +1,28 @@
+{
+  "_note": "Synthetic HR records for the Week 7 agent. Tenure fields are NOT stored; get_employee_record derives them from start_date (or end_date for closed records) as of the pinned AS_OF date.",
+  "records": [
+    {"employee_id": "E1001", "name": "Priya Raman", "status": "active", "jurisdiction": "IN-KA", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2026-06-01", "manager_id": "E1003"},
+    {"employee_id": "E1002", "name": "Marcus Webb", "status": "active", "jurisdiction": "US-CA", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2021-03-15", "manager_id": "E1011",
+     "pto": {"carried_over_from_2025": 5, "used_2026": 12, "projected_unused_end_of_2026": 11}},
+    {"employee_id": "E1003", "name": "Hannah Fischer", "status": "active", "jurisdiction": "DE", "role_level": "manager", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2019-02-01", "manager_id": null},
+    {"employee_id": "E1004", "name": "Oliver Grant", "status": "active", "jurisdiction": "UK", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2025-02-10", "manager_id": "E1005"},
+    {"employee_id": "E1005", "name": "Amelia Clarke", "status": "active", "jurisdiction": "UK", "role_level": "manager", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2017-05-02", "manager_id": null},
+    {"employee_id": "E1006", "name": "Lukas Braun", "status": "active", "jurisdiction": "DE", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2026-07-01", "manager_id": "E1003"},
+    {"employee_id": "E1007", "name": "Sofia Alvarez", "status": "active", "jurisdiction": "US-NY", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2023-01-09", "manager_id": "E1011"},
+    {"employee_id": "E1008", "name": "Daniel Okafor", "status": "active", "jurisdiction": "DE", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2022-09-12", "manager_id": "E1003",
+     "transfer_history": [{"from_jurisdiction": "UK", "to_jurisdiction": "DE", "effective_date": "2026-07-01"}]},
+    {"employee_id": "E1009", "name": "Grace Liu", "status": "active", "jurisdiction": "US-CA", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2024-04-01", "manager_id": "E1011",
+     "parental": {"parent_role": "non_birthing", "event": "adoption", "expected_leave_start": "2026-11-02"}},
+    {"employee_id": "E1011", "name": "Nadia Hassan", "status": "active", "jurisdiction": "US-NY", "role_level": "manager", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2019-10-07", "manager_id": null},
+    {"employee_id": "E1012", "name": "Chloe Bennett", "status": "active", "jurisdiction": "UK", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2026-03-02", "manager_id": "E1005",
+     "service_continuity": {"prior_employee_id": "E0877", "counts_toward_tenure": true,
+       "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."}},
+    {"employee_id": "E0877", "name": "Chloe Bennett", "status": "closed", "jurisdiction": "UK", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2018-04-03", "end_date": "2026-02-13", "manager_id": "E1005"},
+    {"employee_id": "E1013", "name": "Ravi Menon", "status": "active", "jurisdiction": "US-NY", "role_level": "individual_contributor", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2020-06-15", "manager_id": "E1011",
+     "pto": {"carried_over_from_2025": 5, "used_2026": 12, "projected_unused_end_of_2026": 11}},
+    {"employee_id": "E1015", "name": "Jonas Weber", "status": "active", "jurisdiction": "DE", "role_level": "manager", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2026-08-03", "manager_id": null,
+     "service_continuity": {"prior_employee_id": "E0655", "counts_toward_tenure": true,
+       "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."}},
+    {"employee_id": "E0655", "name": "Jonas Weber", "status": "closed", "jurisdiction": "DE", "role_level": "manager", "employment_type": "full_time", "weekly_hours": 40, "start_date": "2016-05-02", "end_date": "2026-07-17", "manager_id": null}
+  ]
+}

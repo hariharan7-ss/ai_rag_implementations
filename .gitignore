@@ -15,3 +15,6 @@ venv/
 
 # week 6 eval: resume checkpoints only
 eval/week6/runs/*.partial.json
+
+# week 7 race: resume checkpoints only
+eval/week7/runs/*.partial.json
