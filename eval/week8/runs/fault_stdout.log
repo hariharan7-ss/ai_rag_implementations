@@ -1,0 +1,43 @@
+q01 without_feedback  stopped_by=max_iters laps=8 tok=742 final=None None
+  (pacing: waiting 10s for the Groq token bucket to refill)
+q01 with_feedback     stopped_by=None laps=5 tok=4,334 final=2.0 weeks
+  (pacing: waiting 28s for the Groq token bucket to refill)
+q02 without_feedback  stopped_by=max_iters laps=8 tok=745 final=None None
+  (pacing: waiting 8s for the Groq token bucket to refill)
+q02 with_feedback     stopped_by=None laps=5 tok=4,633 final=8.0 weeks
+  (pacing: waiting 30s for the Groq token bucket to refill)
+q03 without_feedback  stopped_by=max_iters laps=8 tok=759 final=None None
+  (pacing: waiting 7s for the Groq token bucket to refill)
+q03 with_feedback     stopped_by=None laps=4 tok=3,331 final=6.0 days
+  (pacing: waiting 21s for the Groq token bucket to refill)
+q04 without_feedback  stopped_by=max_iters laps=8 tok=745 final=None None
+  (pacing: waiting 8s for the Groq token bucket to refill)
+q04 with_feedback     stopped_by=None laps=4 tok=2,916 final=1.0 weeks
+  (pacing: waiting 22s for the Groq token bucket to refill)
+q05 without_feedback  stopped_by=max_iters laps=8 tok=745 final=None None
+  (pacing: waiting 7s for the Groq token bucket to refill)
+q05 with_feedback     stopped_by=None laps=5 tok=4,618 final=9.0 weeks
+  (pacing: waiting 26s for the Groq token bucket to refill)
+q06 without_feedback  stopped_by=max_iters laps=8 tok=746 final=None None
+  (pacing: waiting 8s for the Groq token bucket to refill)
+q06 with_feedback     stopped_by=None laps=4 tok=2,974 final=2.0 weeks
+  (pacing: waiting 18s for the Groq token bucket to refill)
+q07 without_feedback  stopped_by=max_iters laps=8 tok=759 final=None None
+  (pacing: waiting 8s for the Groq token bucket to refill)
+q07 with_feedback     stopped_by=None laps=5 tok=5,034 final=0.0 days
+  (pacing: waiting 36s for the Groq token bucket to refill)
+q08 without_feedback  stopped_by=max_iters laps=8 tok=745 final=None None
+  (pacing: waiting 7s for the Groq token bucket to refill)
+q08 with_feedback     stopped_by=None laps=5 tok=4,604 final=7.0 weeks
+  (pacing: waiting 34s for the Groq token bucket to refill)
+q09 without_feedback  stopped_by=max_iters laps=8 tok=741 final=None None
+  (pacing: waiting 7s for the Groq token bucket to refill)
+q09 with_feedback     stopped_by=None laps=6 tok=6,357 final=27.5 days
+  (pacing: waiting 39s for the Groq token bucket to refill)
+q10 without_feedback  stopped_by=max_iters laps=8 tok=746 final=None None
+  (pacing: waiting 7s for the Groq token bucket to refill)
+q10 with_feedback     stopped_by=None laps=5 tok=4,710 final=4.0 weeks
+
+without_feedback: outcome 0% trajectory 0% budget_hit runs 10 rejected laps 70 (1 injected per run) cost p50 $0.000063 max $0.000064 tokens p50 745 max 759 latency p50 0.63s max 0.93s laps mean 8.0
+
+with_feedback: outcome 70% trajectory 0% budget_hit runs 0 rejected laps 10 (1 injected per run) cost p50 $0.000342 max $0.000505 tokens p50 4,611 max 6,357 latency p50 2.51s max 3.92s laps mean 4.8

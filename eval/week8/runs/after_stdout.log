@@ -1,0 +1,40 @@
+t1 q01: 2.0 weeks  laps=4 tok=4,109 2.39s
+  (pacing: waiting 31s for the Groq token bucket to refill)
+t1 q02: 10.0 weeks  laps=4 tok=4,191 2.11s
+  (pacing: waiting 31s for the Groq token bucket to refill)
+t1 q03: 6.0 days  laps=4 tok=4,413 2.34s
+  (pacing: waiting 32s for the Groq token bucket to refill)
+t1 q04: 1.0 weeks  laps=3 tok=2,773 1.74s
+  (pacing: waiting 21s for the Groq token bucket to refill)
+t1 q05: 9.0 weeks  laps=4 tok=4,370 2.53s
+  (pacing: waiting 31s for the Groq token bucket to refill)
+t1 q06: 2.0 weeks  laps=3 tok=2,816 1.64s
+  (pacing: waiting 21s for the Groq token bucket to refill)
+t1 q07: 0.0 days  laps=4 tok=4,784 2.43s
+  (pacing: waiting 35s for the Groq token bucket to refill)
+t1 q08: 8.0 weeks  laps=5 tok=6,196 3.42s
+  (pacing: waiting 41s for the Groq token bucket to refill)
+t1 q09: 27.5 days  laps=5 tok=6,035 3.32s
+  (pacing: waiting 40s for the Groq token bucket to refill)
+t1 q10: 4.0 months  laps=4 tok=4,323 4.34s
+  (pacing: waiting 27s for the Groq token bucket to refill)
+t2 q01: 2.0 weeks  laps=4 tok=4,109 2.24s
+  (pacing: waiting 30s for the Groq token bucket to refill)
+t2 q02: 10.0 weeks  laps=4 tok=4,191 2.48s
+  (pacing: waiting 30s for the Groq token bucket to refill)
+t2 q03: 6.0 days  laps=4 tok=4,402 2.16s
+  (pacing: waiting 33s for the Groq token bucket to refill)
+t2 q04: 1.0 weeks  laps=3 tok=2,762 1.73s
+  (pacing: waiting 21s for the Groq token bucket to refill)
+t2 q05: 9.0 weeks  laps=4 tok=4,369 3.49s
+  (pacing: waiting 27s for the Groq token bucket to refill)
+t2 q06: 2.0 weeks  laps=3 tok=2,834 1.62s
+  (pacing: waiting 21s for the Groq token bucket to refill)
+t2 q07: 0.0 days  laps=4 tok=4,831 2.70s
+  (pacing: waiting 35s for the Groq token bucket to refill)
+t2 q08: 8.0 weeks  laps=5 tok=6,220 2.95s
+  (pacing: waiting 45s for the Groq token bucket to refill)
+t2 q09: 27.5 days  laps=5 tok=6,062 4.40s
+  (pacing: waiting 43s for the Groq token bucket to refill)
+t2 q10: 4.0 months  laps=5 tok=6,148 3.06s
+wrote eval/week8/runs/after.json

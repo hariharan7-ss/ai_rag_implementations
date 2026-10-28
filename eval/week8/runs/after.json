@@ -1,0 +1,2959 @@
+{
+ "label": "after",
+ "created_at": "2026-10-28T09:26:43.493467+00:00",
+ "model": "openai/gpt-oss-20b",
+ "params": {
+  "temperature": 0.2,
+  "top_p": 1.0,
+  "max_tokens": 1024,
+  "seed": 20260923,
+  "reasoning_effort": "low"
+ },
+ "trials": 2,
+ "rows": [
+  {
+   "id": "q01",
+   "class": "single_lookup",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1007 wants to resign. How much written notice is E1007 asked to give?",
+   "final": {
+    "employee_id": "E1007",
+    "status": "answered",
+    "value": 2.0,
+    "unit": "weeks",
+    "answer": "Sofia Alvarez is asked to give at least 2 weeks written notice.",
+    "sources": [
+     "JUR-US-NY-notice_period",
+     "HB-08-1"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 3905,
+   "completion_tokens": 204,
+   "total_tokens": 4109,
+   "cost_usd": 0.00035407500000000003,
+   "wall_s": 2.3860818999819458,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.3860818999819458,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 710,
+     "completion_tokens": 32,
+     "latency_s": 0.72,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1007"
+       },
+       "result": {
+        "employee_id": "E1007",
+        "name": "Sofia Alvarez",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2023-01-09",
+        "manager_id": "E1011",
+        "as_of": "2026-09-29",
+        "tenure_years": 3.72,
+        "complete_years_of_service": 3,
+        "complete_months_of_service": 44
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 859,
+     "completion_tokens": 41,
+     "latency_s": 0.451,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-NY",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-US-NY-notice_period",
+        "jurisdiction": "US-NY",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "At-will employment: no statutory minimum notice for either party. The notice the company asks a resigning employee to give is set by the company-wide handbook (Offboarding and Termination Policy, Section 1). Final pay is due by the next regular payday."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1006,
+     "completion_tokens": 38,
+     "latency_s": 0.627,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "Offboarding and Termination Policy Section 1 notice"
+       },
+       "result": {
+        "query": "Offboarding and Termination Policy Section 1 notice",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         },
+         {
+          "section_id": "HB-09-1",
+          "policy": "Working Hours and Overtime Policy",
+          "section": "1. Standard Hours",
+          "effective": "January 1, 2025",
+          "text": "The standard work week is 40 hours. Exact daily schedules may vary by team as long as core hours (see Remote and Hybrid Work Policy, Section 4) are met."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1330,
+     "completion_tokens": 93,
+     "latency_s": 0.524,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q02",
+   "class": "single_lookup",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1009 is adopting a child. How many weeks of paid parental leave is E1009 entitled to?",
+   "final": {
+    "employee_id": "E1009",
+    "status": "answered",
+    "value": 10.0,
+    "unit": "weeks",
+    "answer": "Grace Liu is entitled to 10 weeks of paid parental leave for her adoption.",
+    "sources": [
+     "HB-10-1"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 3999,
+   "completion_tokens": 192,
+   "total_tokens": 4191,
+   "cost_usd": 0.000357525,
+   "wall_s": 2.1143624000251293,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.1143624000251293,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.458,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1009"
+       },
+       "result": {
+        "employee_id": "E1009",
+        "name": "Grace Liu",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2024-04-01",
+        "manager_id": "E1011",
+        "parental": {
+         "parent_role": "non_birthing",
+         "event": "adoption",
+         "expected_leave_start": "2026-11-02"
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 2.49,
+        "complete_years_of_service": 2,
+        "complete_months_of_service": 29
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 895,
+     "completion_tokens": 40,
+     "latency_s": 0.498,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-CA",
+        "topic": "parental_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-CA-parental_leave",
+        "jurisdiction": "US-CA",
+        "topic": "parental_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "No local override on the paid weeks: the company-wide Parental Leave Policy and its latest Addendum apply."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1013,
+     "completion_tokens": 33,
+     "latency_s": 0.567,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "parental leave adoption weeks US-CA"
+       },
+       "result": {
+        "query": "parental leave adoption weeks US-CA",
+        "sections": [
+         {
+          "section_id": "HB-07-2",
+          "policy": "Parental Leave Policy",
+          "section": "2. Leave Duration",
+          "effective": "January 1, 2025",
+          "text": "Birthing parents receive 16 weeks of paid parental leave. Non-birthing parents (including through adoption or foster placement) receive 8 weeks of paid parental leave. This leave is in addition to any short-term disability benefit that may apply to birth recovery."
+         },
+         {
+          "section_id": "HB-07-3",
+          "policy": "Parental Leave Policy",
+          "section": "3. Timing and Flexibility",
+          "effective": "January 1, 2025",
+          "text": "Parental leave must be taken within 12 months of the birth, adoption, or placement date. Leave can be taken continuously or split into two blocks of at least 2 weeks each, with manager and HR approval for split arrangements."
+         },
+         {
+          "section_id": "HB-10-1",
+          "policy": "HR Policy Addendum",
+          "section": "1. Parental Leave Duration Update",
+          "effective": "January 1, 2026",
+          "text": "Effective January 1, 2026, birthing parents receive 20 weeks of paid parental leave (increased from 16 weeks). Non-birthing parents receive 10 weeks of paid parental leave (increased from 8 weeks). All other provisions of the Parental Leave Policy, including timing, pay level, and job protection, remain unchanged."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1378,
+     "completion_tokens": 87,
+     "latency_s": 0.584,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q03",
+   "class": "single_lookup",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1013 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1013",
+    "status": "answered",
+    "value": 6.0,
+    "unit": "days",
+    "answer": "E1013 will forfeit 6 unused PTO days on December 31, 2026.",
+    "sources": [
+     "JUR-US-NY-annual_leave",
+     "HB-01-2"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 4174,
+   "completion_tokens": 239,
+   "total_tokens": 4413,
+   "cost_usd": 0.00038475,
+   "wall_s": 2.3441834999248385,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.3441834999248385,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.445,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1013"
+       },
+       "result": {
+        "employee_id": "E1013",
+        "name": "Ravi Menon",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2020-06-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 6.29,
+        "complete_years_of_service": 6,
+        "complete_months_of_service": 75
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 914,
+     "completion_tokens": 41,
+     "latency_s": 0.571,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-NY",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-NY-annual_leave",
+        "jurisdiction": "US-NY",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "No local override: the company-wide PTO rules apply (18 days per year; at most 5 unused days carry over, the rest are forfeited on December 31)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1043,
+     "completion_tokens": 41,
+     "latency_s": 0.646,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "annual leave 18 days per year 5 unused days carry over"
+       },
+       "result": {
+        "query": "annual leave 18 days per year 5 unused days carry over",
+        "sections": [
+         {
+          "section_id": "HB-01-2",
+          "policy": "Leave and Time Off Policy",
+          "section": "2. Paid Time Off (PTO)",
+          "effective": "January 1, 2025",
+          "text": "Full-time employees accrue 18 days of PTO per calendar year, accrued monthly at a rate of 1.5 days per month. PTO accrual begins on an employee's start date. Employees may carry over a maximum of 5 unused PTO days into the following calendar year; any balance above 5 days is forfeited on December 31st unless local law requires otherwise. PTO requests must be submitted in the HR system at least 5 business days in advance for any absence longer than 2 consecutive days. Requests of 1-2 days may be submitted with 24 hours notice, subject to manager approval based on team coverage needs."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-01-5",
+          "policy": "Leave and Time Off Policy",
+          "section": "5. Unpaid Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees who have exhausted PTO and sick leave may request unpaid leave of up to 10 business days per year with manager and HR approval. Requests must be submitted at least 2 weeks in advance except in emergencies."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1490,
+     "completion_tokens": 125,
+     "latency_s": 0.677,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q04",
+   "class": "param_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1004's role. What is the minimum notice it must give E1004?",
+   "final": {
+    "employee_id": "E1004",
+    "status": "answered",
+    "value": 1.0,
+    "unit": "weeks",
+    "answer": "The company must give Oliver Grant one week’s notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 3,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 2619,
+   "completion_tokens": 154,
+   "total_tokens": 2773,
+   "cost_usd": 0.000242625,
+   "wall_s": 1.740048100007698,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 1.740048100007698,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.627,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1004"
+       },
+       "result": {
+        "employee_id": "E1004",
+        "name": "Oliver Grant",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2025-02-10",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 1.63,
+        "complete_years_of_service": 1,
+        "complete_months_of_service": 19
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 859,
+     "completion_tokens": 55,
+     "latency_s": 0.575,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1047,
+     "completion_tokens": 67,
+     "latency_s": 0.531,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q05",
+   "class": "param_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1005's role. What is the minimum notice it must give E1005?",
+   "final": {
+    "employee_id": "E1005",
+    "status": "answered",
+    "value": 9.0,
+    "unit": "weeks",
+    "answer": "The company must give E1005 a minimum of 9 weeks’ notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4154,
+   "completion_tokens": 216,
+   "total_tokens": 4370,
+   "cost_usd": 0.00035689399999999996,
+   "wall_s": 2.5265570000046864,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.5265570000046864,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.799,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1005"
+       },
+       "result": {
+        "employee_id": "E1005",
+        "name": "Amelia Clarke",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2017-05-02",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 9.41,
+        "complete_years_of_service": 9,
+        "complete_months_of_service": 112
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 855,
+     "completion_tokens": 35,
+     "latency_s": 0.531,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "notice period manager UK"
+       },
+       "result": {
+        "query": "notice period manager UK",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1199,
+     "completion_tokens": 38,
+     "latency_s": 0.53,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1387,
+     "completion_tokens": 111,
+     "latency_s": 0.661,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q06",
+   "class": "param_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1006's employment. What is the minimum notice it must give E1006?",
+   "final": {
+    "employee_id": "E1006",
+    "status": "answered",
+    "value": 2.0,
+    "unit": "weeks",
+    "answer": "The company must give Lukas Braun a minimum of 2 weeks’ notice.",
+    "sources": [
+     "JUR-DE-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 3,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 2662,
+   "completion_tokens": 154,
+   "total_tokens": 2816,
+   "cost_usd": 0.00022639400000000001,
+   "wall_s": 1.6415498999413103,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 1.6415498999413103,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.56,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1006"
+       },
+       "result": {
+        "employee_id": "E1006",
+        "name": "Lukas Braun",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-07-01",
+        "manager_id": "E1003",
+        "as_of": "2026-09-29",
+        "tenure_years": 0.25,
+        "complete_years_of_service": 0,
+        "complete_months_of_service": 2
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 861,
+     "completion_tokens": 44,
+     "latency_s": 0.513,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-DE-notice_period",
+        "jurisdiction": "DE",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1087,
+     "completion_tokens": 78,
+     "latency_s": 0.563,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q07",
+   "class": "param_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1002 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1002",
+    "status": "answered",
+    "value": 0.0,
+    "unit": "days",
+    "answer": "None of Marcus Webb’s unused PTO days will be forfeited on December 31, 2026.",
+    "sources": [
+     "HB-01-2",
+     "JUR-US-CA-annual_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4513,
+   "completion_tokens": 271,
+   "total_tokens": 4784,
+   "cost_usd": 0.000419775,
+   "wall_s": 2.426050700014457,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.426050700014457,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.568,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1002"
+       },
+       "result": {
+        "employee_id": "E1002",
+        "name": "Marcus Webb",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2021-03-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 5.54,
+        "complete_years_of_service": 5,
+        "complete_months_of_service": 66
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 912,
+     "completion_tokens": 38,
+     "latency_s": 0.233,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "PTO carry over US-CA"
+       },
+       "result": {
+        "query": "PTO carry over US-CA",
+        "sections": [
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-01-2",
+          "policy": "Leave and Time Off Policy",
+          "section": "2. Paid Time Off (PTO)",
+          "effective": "January 1, 2025",
+          "text": "Full-time employees accrue 18 days of PTO per calendar year, accrued monthly at a rate of 1.5 days per month. PTO accrual begins on an employee's start date. Employees may carry over a maximum of 5 unused PTO days into the following calendar year; any balance above 5 days is forfeited on December 31st unless local law requires otherwise. PTO requests must be submitted in the HR system at least 5 business days in advance for any absence longer than 2 consecutive days. Requests of 1-2 days may be submitted with 24 hours notice, subject to manager approval based on team coverage needs."
+         },
+         {
+          "section_id": "HB-08-4",
+          "policy": "Offboarding and Termination Policy",
+          "section": "4. Benefits Continuation",
+          "effective": "January 1, 2025",
+          "text": "Health benefits end on the last day of the month in which employment ends. Employees may be eligible to continue coverage through COBRA (US) or equivalent local programs at their own cost. Information is provided by People Operations within 14 days of the termination date."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1358,
+     "completion_tokens": 89,
+     "latency_s": 0.68,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-CA",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-CA-annual_leave",
+        "jurisdiction": "US-CA",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "The company-wide 18 days of PTO apply, but forfeiture is prohibited: the company-wide rule that forfeits unused PTO above 5 days on December 31 does not apply in California. All unused PTO carries over, subject to an accrual cap of 27 days (1.5x the annual entitlement)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1516,
+     "completion_tokens": 112,
+     "latency_s": 0.937,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q08",
+   "class": "path_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1012's role. What is the minimum notice it must give E1012?",
+   "final": {
+    "employee_id": "E1012",
+    "status": "answered",
+    "value": 8.0,
+    "unit": "weeks",
+    "answer": "The company must give E1012 a minimum of 8 weeks’ notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 5926,
+   "completion_tokens": 270,
+   "total_tokens": 6196,
+   "cost_usd": 0.0005059940000000001,
+   "wall_s": 3.416818799916655,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.416818799916655,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.691,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1012"
+       },
+       "result": {
+        "employee_id": "E1012",
+        "name": "Chloe Bennett",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-03-02",
+        "manager_id": "E1005",
+        "service_continuity": {
+         "prior_employee_id": "E0877",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0877's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 949,
+     "completion_tokens": 35,
+     "latency_s": 0.493,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E0877"
+       },
+       "result": {
+        "employee_id": "E0877",
+        "name": "Chloe Bennett",
+        "status": "closed",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2018-04-03",
+        "end_date": "2026-02-13",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 7.87,
+        "complete_years_of_service": 7,
+        "complete_months_of_service": 94
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1108,
+     "completion_tokens": 34,
+     "latency_s": 0.833,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "notice period UK employee resignation"
+       },
+       "result": {
+        "query": "notice period UK employee resignation",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-05-1",
+          "policy": "Benefits Overview",
+          "section": "1. Health Insurance",
+          "effective": "January 1, 2025",
+          "text": "Solstice Analytics offers medical, dental, and vision coverage through Meridian Health Group, available to full-time employees starting the first day of the month following their start date (no waiting period beyond that). The company covers 80% of the employee premium and 60% of dependent premiums for the base PPO plan. A high-deductible plan with an HSA option is also available, with the company covering 90% of the employee premium and contributing 500 USD per year to the employee's HSA."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1484,
+     "completion_tokens": 38,
+     "latency_s": 0.524,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1672,
+     "completion_tokens": 131,
+     "latency_s": 0.864,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q09",
+   "class": "path_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "How many days of PTO is E1008 entitled to for calendar year 2026?",
+   "final": {
+    "employee_id": "E1008",
+    "status": "answered",
+    "value": 27.5,
+    "unit": "days",
+    "answer": "E1008 is entitled to 27.5 days of PTO for calendar year 2026.",
+    "sources": [
+     "JUR-DE-annual_leave",
+     "JUR-UK-annual_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 5712,
+   "completion_tokens": 323,
+   "total_tokens": 6035,
+   "cost_usd": 0.000505844,
+   "wall_s": 3.3237635999685153,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.3237635999685153,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 709,
+     "completion_tokens": 32,
+     "latency_s": 0.808,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1008"
+       },
+       "result": {
+        "employee_id": "E1008",
+        "name": "Daniel Okafor",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2022-09-12",
+        "manager_id": "E1003",
+        "transfer_history": [
+         {
+          "from_jurisdiction": "UK",
+          "to_jurisdiction": "DE",
+          "effective_date": "2026-07-01"
+         }
+        ],
+        "as_of": "2026-09-29",
+        "tenure_years": 4.05,
+        "complete_years_of_service": 4,
+        "complete_months_of_service": 48
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 892,
+     "completion_tokens": 37,
+     "latency_s": 0.569,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "annual leave entitlement full time employee 2026"
+       },
+       "result": {
+        "query": "annual leave entitlement full time employee 2026",
+        "sections": [
+         {
+          "section_id": "HB-01-1",
+          "policy": "Leave and Time Off Policy",
+          "section": "1. Purpose",
+          "effective": "January 1, 2025",
+          "text": "This policy explains how paid time off (PTO), sick leave, and public holidays work for all full-time employees of Solstice Analytics."
+         },
+         {
+          "section_id": "HB-07-1",
+          "policy": "Parental Leave Policy",
+          "section": "1. Eligibility",
+          "effective": "January 1, 2025",
+          "text": "All full-time employees are eligible for paid parental leave upon the birth, adoption, or foster placement of a child, regardless of tenure. Part-time employees working at least 20 hours per week are eligible on a pro-rated basis."
+         },
+         {
+          "section_id": "HB-01-7",
+          "policy": "Leave and Time Off Policy",
+          "section": "7. Notes on Interaction with Other Policies",
+          "effective": "January 1, 2025",
+          "text": "Parental leave is governed separately — see the Parental Leave Policy document, not this policy. Remote employees follow the same PTO accrual and request rules as in-office employees; there is no difference in PTO entitlement based on work location."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1208,
+     "completion_tokens": 36,
+     "latency_s": 0.441,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-DE-annual_leave",
+        "jurisdiction": "DE",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "German employees receive 30 days of PTO per calendar year (replaces the company-wide 18 days). Unused days carry over until March 31 of the next year, then lapse. Transfers into Germany: in the calendar year an employee transfers in from another Solstice jurisdiction, that year's entitlement is pro-rated by full calendar months - months before the transfer at the previous jurisdiction's annual PTO figure, months from the transfer date at 30 days."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1386,
+     "completion_tokens": 67,
+     "latency_s": 0.566,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-UK-annual_leave",
+        "jurisdiction": "UK",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "UK employees receive 25 days of PTO per calendar year (replaces the company-wide 18 days), accrued monthly, plus UK bank holidays. Carry-over follows the company-wide handbook (maximum 5 days)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1517,
+     "completion_tokens": 151,
+     "latency_s": 0.932,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q10",
+   "class": "path_branch",
+   "trial": 1,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1015's employment. What is the minimum notice it must give E1015?",
+   "final": {
+    "employee_id": "E1015",
+    "status": "answered",
+    "value": 4.0,
+    "unit": "months",
+    "answer": "The company must give Jonas Weber a 4‑month notice period, ending on the last day of a calendar month.",
+    "sources": [
+     "JUR-DE-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4083,
+   "completion_tokens": 240,
+   "total_tokens": 4323,
+   "cost_usd": 0.000358769,
+   "wall_s": 4.343638200080022,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 4.343638200080022,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 1.316,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1015"
+       },
+       "result": {
+        "employee_id": "E1015",
+        "name": "Jonas Weber",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-08-03",
+        "manager_id": null,
+        "service_continuity": {
+         "prior_employee_id": "E0655",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0655's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 945,
+     "completion_tokens": 42,
+     "latency_s": 0.512,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E0655"
+       },
+       "result": {
+        "employee_id": "E0655",
+        "name": "Jonas Weber",
+        "status": "closed",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2016-05-02",
+        "end_date": "2026-07-17",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 10.21,
+        "complete_years_of_service": 10,
+        "complete_months_of_service": 122
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1099,
+     "completion_tokens": 44,
+     "latency_s": 0.619,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-DE-notice_period",
+        "jurisdiction": "DE",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1325,
+     "completion_tokens": 122,
+     "latency_s": 1.892,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q01",
+   "class": "single_lookup",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1007 wants to resign. How much written notice is E1007 asked to give?",
+   "final": {
+    "employee_id": "E1007",
+    "status": "answered",
+    "value": 2.0,
+    "unit": "weeks",
+    "answer": "Sofia Alvarez is asked to give at least 2 weeks written notice.",
+    "sources": [
+     "JUR-US-NY-notice_period",
+     "HB-08-1"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 3905,
+   "completion_tokens": 204,
+   "total_tokens": 4109,
+   "cost_usd": 0.00035407500000000003,
+   "wall_s": 2.2446162999840453,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.2446162999840453,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 710,
+     "completion_tokens": 32,
+     "latency_s": 0.542,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1007"
+       },
+       "result": {
+        "employee_id": "E1007",
+        "name": "Sofia Alvarez",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2023-01-09",
+        "manager_id": "E1011",
+        "as_of": "2026-09-29",
+        "tenure_years": 3.72,
+        "complete_years_of_service": 3,
+        "complete_months_of_service": 44
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 859,
+     "completion_tokens": 41,
+     "latency_s": 0.468,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-NY",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-US-NY-notice_period",
+        "jurisdiction": "US-NY",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "At-will employment: no statutory minimum notice for either party. The notice the company asks a resigning employee to give is set by the company-wide handbook (Offboarding and Termination Policy, Section 1). Final pay is due by the next regular payday."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1006,
+     "completion_tokens": 38,
+     "latency_s": 0.503,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "Offboarding and Termination Policy Section 1 notice"
+       },
+       "result": {
+        "query": "Offboarding and Termination Policy Section 1 notice",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         },
+         {
+          "section_id": "HB-09-1",
+          "policy": "Working Hours and Overtime Policy",
+          "section": "1. Standard Hours",
+          "effective": "January 1, 2025",
+          "text": "The standard work week is 40 hours. Exact daily schedules may vary by team as long as core hours (see Remote and Hybrid Work Policy, Section 4) are met."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1330,
+     "completion_tokens": 93,
+     "latency_s": 0.725,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q02",
+   "class": "single_lookup",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1009 is adopting a child. How many weeks of paid parental leave is E1009 entitled to?",
+   "final": {
+    "employee_id": "E1009",
+    "status": "answered",
+    "value": 10.0,
+    "unit": "weeks",
+    "answer": "Grace Liu is entitled to 10 weeks of paid parental leave for her adoption.",
+    "sources": [
+     "HB-10-1"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 3999,
+   "completion_tokens": 192,
+   "total_tokens": 4191,
+   "cost_usd": 0.000357525,
+   "wall_s": 2.4825791999464855,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.4825791999464855,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.608,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1009"
+       },
+       "result": {
+        "employee_id": "E1009",
+        "name": "Grace Liu",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2024-04-01",
+        "manager_id": "E1011",
+        "parental": {
+         "parent_role": "non_birthing",
+         "event": "adoption",
+         "expected_leave_start": "2026-11-02"
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 2.49,
+        "complete_years_of_service": 2,
+        "complete_months_of_service": 29
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 895,
+     "completion_tokens": 40,
+     "latency_s": 0.54,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-CA",
+        "topic": "parental_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-CA-parental_leave",
+        "jurisdiction": "US-CA",
+        "topic": "parental_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "No local override on the paid weeks: the company-wide Parental Leave Policy and its latest Addendum apply."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1013,
+     "completion_tokens": 33,
+     "latency_s": 0.572,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "parental leave adoption weeks US-CA"
+       },
+       "result": {
+        "query": "parental leave adoption weeks US-CA",
+        "sections": [
+         {
+          "section_id": "HB-07-2",
+          "policy": "Parental Leave Policy",
+          "section": "2. Leave Duration",
+          "effective": "January 1, 2025",
+          "text": "Birthing parents receive 16 weeks of paid parental leave. Non-birthing parents (including through adoption or foster placement) receive 8 weeks of paid parental leave. This leave is in addition to any short-term disability benefit that may apply to birth recovery."
+         },
+         {
+          "section_id": "HB-07-3",
+          "policy": "Parental Leave Policy",
+          "section": "3. Timing and Flexibility",
+          "effective": "January 1, 2025",
+          "text": "Parental leave must be taken within 12 months of the birth, adoption, or placement date. Leave can be taken continuously or split into two blocks of at least 2 weeks each, with manager and HR approval for split arrangements."
+         },
+         {
+          "section_id": "HB-10-1",
+          "policy": "HR Policy Addendum",
+          "section": "1. Parental Leave Duration Update",
+          "effective": "January 1, 2026",
+          "text": "Effective January 1, 2026, birthing parents receive 20 weeks of paid parental leave (increased from 16 weeks). Non-birthing parents receive 10 weeks of paid parental leave (increased from 8 weeks). All other provisions of the Parental Leave Policy, including timing, pay level, and job protection, remain unchanged."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1378,
+     "completion_tokens": 87,
+     "latency_s": 0.756,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q03",
+   "class": "single_lookup",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1013 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1013",
+    "status": "answered",
+    "value": 6.0,
+    "unit": "days",
+    "answer": "E1013 will forfeit 6 unused PTO days on December 31, 2026.",
+    "sources": [
+     "JUR-US-NY-annual_leave",
+     "HB-01-2"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 4172,
+   "completion_tokens": 230,
+   "total_tokens": 4402,
+   "cost_usd": 0.00038189999999999996,
+   "wall_s": 2.1602169999387115,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.1602169999387115,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.686,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1013"
+       },
+       "result": {
+        "employee_id": "E1013",
+        "name": "Ravi Menon",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2020-06-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 6.29,
+        "complete_years_of_service": 6,
+        "complete_months_of_service": 75
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 914,
+     "completion_tokens": 41,
+     "latency_s": 0.399,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-NY",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-NY-annual_leave",
+        "jurisdiction": "US-NY",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "No local override: the company-wide PTO rules apply (18 days per year; at most 5 unused days carry over, the rest are forfeited on December 31)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1043,
+     "completion_tokens": 40,
+     "latency_s": 0.405,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "annual leave 18 days per year 5 days carry over"
+       },
+       "result": {
+        "query": "annual leave 18 days per year 5 days carry over",
+        "sections": [
+         {
+          "section_id": "HB-01-2",
+          "policy": "Leave and Time Off Policy",
+          "section": "2. Paid Time Off (PTO)",
+          "effective": "January 1, 2025",
+          "text": "Full-time employees accrue 18 days of PTO per calendar year, accrued monthly at a rate of 1.5 days per month. PTO accrual begins on an employee's start date. Employees may carry over a maximum of 5 unused PTO days into the following calendar year; any balance above 5 days is forfeited on December 31st unless local law requires otherwise. PTO requests must be submitted in the HR system at least 5 business days in advance for any absence longer than 2 consecutive days. Requests of 1-2 days may be submitted with 24 hours notice, subject to manager approval based on team coverage needs."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-01-5",
+          "policy": "Leave and Time Off Policy",
+          "section": "5. Unpaid Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees who have exhausted PTO and sick leave may request unpaid leave of up to 10 business days per year with manager and HR approval. Requests must be submitted at least 2 weeks in advance except in emergencies."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1488,
+     "completion_tokens": 117,
+     "latency_s": 0.664,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q04",
+   "class": "param_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1004's role. What is the minimum notice it must give E1004?",
+   "final": {
+    "employee_id": "E1004",
+    "status": "answered",
+    "value": 1.0,
+    "unit": "weeks",
+    "answer": "The company must give Oliver Grant one week’s notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 3,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 2619,
+   "completion_tokens": 143,
+   "total_tokens": 2762,
+   "cost_usd": 0.00023932499999999998,
+   "wall_s": 1.731057700002566,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 1.731057700002566,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.649,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1004"
+       },
+       "result": {
+        "employee_id": "E1004",
+        "name": "Oliver Grant",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2025-02-10",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 1.63,
+        "complete_years_of_service": 1,
+        "complete_months_of_service": 19
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 859,
+     "completion_tokens": 44,
+     "latency_s": 0.518,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1047,
+     "completion_tokens": 67,
+     "latency_s": 0.561,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q05",
+   "class": "param_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1005's role. What is the minimum notice it must give E1005?",
+   "final": {
+    "employee_id": "E1005",
+    "status": "answered",
+    "value": 9.0,
+    "unit": "weeks",
+    "answer": "The company must give E1005 a minimum of 9 weeks’ notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4154,
+   "completion_tokens": 215,
+   "total_tokens": 4369,
+   "cost_usd": 0.00035659399999999995,
+   "wall_s": 3.4925255000125617,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.4925255000125617,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.426,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1005"
+       },
+       "result": {
+        "employee_id": "E1005",
+        "name": "Amelia Clarke",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2017-05-02",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 9.41,
+        "complete_years_of_service": 9,
+        "complete_months_of_service": 112
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 855,
+     "completion_tokens": 35,
+     "latency_s": 0.348,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "notice period manager UK"
+       },
+       "result": {
+        "query": "notice period manager UK",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1199,
+     "completion_tokens": 38,
+     "latency_s": 2.161,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1387,
+     "completion_tokens": 110,
+     "latency_s": 0.555,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q06",
+   "class": "param_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1006's employment. What is the minimum notice it must give E1006?",
+   "final": {
+    "employee_id": "E1006",
+    "status": "answered",
+    "value": 2.0,
+    "unit": "weeks",
+    "answer": "The company must give E1006 a minimum of two weeks’ notice.",
+    "sources": [
+     "JUR-DE-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 3,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 2662,
+   "completion_tokens": 172,
+   "total_tokens": 2834,
+   "cost_usd": 0.00025125,
+   "wall_s": 1.618652499979362,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 1.618652499979362,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.599,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1006"
+       },
+       "result": {
+        "employee_id": "E1006",
+        "name": "Lukas Braun",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-07-01",
+        "manager_id": "E1003",
+        "as_of": "2026-09-29",
+        "tenure_years": 0.25,
+        "complete_years_of_service": 0,
+        "complete_months_of_service": 2
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 861,
+     "completion_tokens": 44,
+     "latency_s": 0.376,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-DE-notice_period",
+        "jurisdiction": "DE",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1087,
+     "completion_tokens": 96,
+     "latency_s": 0.64,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q07",
+   "class": "param_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1002 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1002",
+    "status": "answered",
+    "value": 0.0,
+    "unit": "days",
+    "answer": "None of the 11 unused PTO days will be forfeited; California law overrides the company rule, allowing all unused PTO to carry over.",
+    "sources": [
+     "HB-01-2",
+     "JUR-US-CA-annual_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4513,
+   "completion_tokens": 318,
+   "total_tokens": 4831,
+   "cost_usd": 0.000433875,
+   "wall_s": 2.6993259000591934,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.6993259000591934,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.833,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1002"
+       },
+       "result": {
+        "employee_id": "E1002",
+        "name": "Marcus Webb",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2021-03-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 5.54,
+        "complete_years_of_service": 5,
+        "complete_months_of_service": 66
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 912,
+     "completion_tokens": 38,
+     "latency_s": 0.319,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "PTO carry over US-CA"
+       },
+       "result": {
+        "query": "PTO carry over US-CA",
+        "sections": [
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-01-2",
+          "policy": "Leave and Time Off Policy",
+          "section": "2. Paid Time Off (PTO)",
+          "effective": "January 1, 2025",
+          "text": "Full-time employees accrue 18 days of PTO per calendar year, accrued monthly at a rate of 1.5 days per month. PTO accrual begins on an employee's start date. Employees may carry over a maximum of 5 unused PTO days into the following calendar year; any balance above 5 days is forfeited on December 31st unless local law requires otherwise. PTO requests must be submitted in the HR system at least 5 business days in advance for any absence longer than 2 consecutive days. Requests of 1-2 days may be submitted with 24 hours notice, subject to manager approval based on team coverage needs."
+         },
+         {
+          "section_id": "HB-08-4",
+          "policy": "Offboarding and Termination Policy",
+          "section": "4. Benefits Continuation",
+          "effective": "January 1, 2025",
+          "text": "Health benefits end on the last day of the month in which employment ends. Employees may be eligible to continue coverage through COBRA (US) or equivalent local programs at their own cost. Information is provided by People Operations within 14 days of the termination date."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1358,
+     "completion_tokens": 98,
+     "latency_s": 0.644,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-CA",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-CA-annual_leave",
+        "jurisdiction": "US-CA",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "The company-wide 18 days of PTO apply, but forfeiture is prohibited: the company-wide rule that forfeits unused PTO above 5 days on December 31 does not apply in California. All unused PTO carries over, subject to an accrual cap of 27 days (1.5x the annual entitlement)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1516,
+     "completion_tokens": 150,
+     "latency_s": 0.898,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q08",
+   "class": "path_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1012's role. What is the minimum notice it must give E1012?",
+   "final": {
+    "employee_id": "E1012",
+    "status": "answered",
+    "value": 8.0,
+    "unit": "weeks",
+    "answer": "The company must give E1012 a minimum of 8 weeks’ notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 5926,
+   "completion_tokens": 294,
+   "total_tokens": 6220,
+   "cost_usd": 0.00053265,
+   "wall_s": 2.9522644999669865,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.9522644999669865,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.612,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1012"
+       },
+       "result": {
+        "employee_id": "E1012",
+        "name": "Chloe Bennett",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-03-02",
+        "manager_id": "E1005",
+        "service_continuity": {
+         "prior_employee_id": "E0877",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0877's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 949,
+     "completion_tokens": 35,
+     "latency_s": 0.551,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E0877"
+       },
+       "result": {
+        "employee_id": "E0877",
+        "name": "Chloe Bennett",
+        "status": "closed",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2018-04-03",
+        "end_date": "2026-02-13",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 7.87,
+        "complete_years_of_service": 7,
+        "complete_months_of_service": 94
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1108,
+     "completion_tokens": 34,
+     "latency_s": 0.504,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "notice period UK employee resignation"
+       },
+       "result": {
+        "query": "notice period UK employee resignation",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-05-1",
+          "policy": "Benefits Overview",
+          "section": "1. Health Insurance",
+          "effective": "January 1, 2025",
+          "text": "Solstice Analytics offers medical, dental, and vision coverage through Meridian Health Group, available to full-time employees starting the first day of the month following their start date (no waiting period beyond that). The company covers 80% of the employee premium and 60% of dependent premiums for the base PPO plan. A high-deductible plan with an HSA option is also available, with the company covering 90% of the employee premium and contributing 500 USD per year to the employee's HSA."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1484,
+     "completion_tokens": 38,
+     "latency_s": 0.573,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1672,
+     "completion_tokens": 155,
+     "latency_s": 0.708,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q09",
+   "class": "path_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "How many days of PTO is E1008 entitled to for calendar year 2026?",
+   "final": {
+    "employee_id": "E1008",
+    "status": "answered",
+    "value": 27.5,
+    "unit": "days",
+    "answer": "E1008 is entitled to 27.5 days of PTO for calendar year 2026.",
+    "sources": [
+     "JUR-DE-annual_leave",
+     "JUR-UK-annual_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 5649,
+   "completion_tokens": 413,
+   "total_tokens": 6062,
+   "cost_usd": 0.000547575,
+   "wall_s": 4.398292699945159,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 4.398292699945159,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 709,
+     "completion_tokens": 32,
+     "latency_s": 1.926,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1008"
+       },
+       "result": {
+        "employee_id": "E1008",
+        "name": "Daniel Okafor",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2022-09-12",
+        "manager_id": "E1003",
+        "transfer_history": [
+         {
+          "from_jurisdiction": "UK",
+          "to_jurisdiction": "DE",
+          "effective_date": "2026-07-01"
+         }
+        ],
+        "as_of": "2026-09-29",
+        "tenure_years": 4.05,
+        "complete_years_of_service": 4,
+        "complete_months_of_service": 48
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 892,
+     "completion_tokens": 33,
+     "latency_s": 0.498,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "annual_leave"
+       },
+       "result": {
+        "query": "annual_leave",
+        "sections": [
+         {
+          "section_id": "HB-05-5",
+          "policy": "Benefits Overview",
+          "section": "5. Learning and Development",
+          "effective": "January 1, 2025",
+          "text": "Each employee has an annual learning budget of 1,000 USD for courses, books, conferences, or certifications relevant to their role, subject to manager approval."
+         },
+         {
+          "section_id": "HB-07-4",
+          "policy": "Parental Leave Policy",
+          "section": "4. Pay and Benefits During Leave",
+          "effective": "January 1, 2025",
+          "text": "Parental leave is paid at 100% of base salary. Health benefits continue uninterrupted during parental leave with no change to employee contribution amounts. PTO and sick leave do not accrue during weeks of unpaid leave but do continue to accrue during paid parental leave weeks."
+         },
+         {
+          "section_id": "HB-06-7",
+          "policy": "Performance Review Process",
+          "section": "7. Promotions",
+          "effective": "January 1, 2025",
+          "text": "Promotions are considered during the annual review cycle by default, but may be processed off-cycle with VP approval for exceptional circumstances (e.g., retention risk, significant scope change)."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1187,
+     "completion_tokens": 36,
+     "latency_s": 0.589,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-DE-annual_leave",
+        "jurisdiction": "DE",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "German employees receive 30 days of PTO per calendar year (replaces the company-wide 18 days). Unused days carry over until March 31 of the next year, then lapse. Transfers into Germany: in the calendar year an employee transfers in from another Solstice jurisdiction, that year's entitlement is pro-rated by full calendar months - months before the transfer at the previous jurisdiction's annual PTO figure, months from the transfer date at 30 days."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1365,
+     "completion_tokens": 108,
+     "latency_s": 0.597,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-UK-annual_leave",
+        "jurisdiction": "UK",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "UK employees receive 25 days of PTO per calendar year (replaces the company-wide 18 days), accrued monthly, plus UK bank holidays. Carry-over follows the company-wide handbook (maximum 5 days)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1496,
+     "completion_tokens": 204,
+     "latency_s": 0.782,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  },
+  {
+   "id": "q10",
+   "class": "path_branch",
+   "trial": 2,
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1015's employment. What is the minimum notice it must give E1015?",
+   "final": {
+    "employee_id": "E1015",
+    "status": "answered",
+    "value": 4.0,
+    "unit": "months",
+    "answer": "The company must give Jonas Weber a minimum of four months’ notice.",
+    "sources": [
+     "JUR-DE-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 5870,
+   "completion_tokens": 278,
+   "total_tokens": 6148,
+   "cost_usd": 0.00052365,
+   "wall_s": 3.06397040002048,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.06397040002048,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.698,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1015"
+       },
+       "result": {
+        "employee_id": "E1015",
+        "name": "Jonas Weber",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-08-03",
+        "manager_id": null,
+        "service_continuity": {
+         "prior_employee_id": "E0655",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0655's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "prompt_tokens": 945,
+     "completion_tokens": 35,
+     "latency_s": 0.502,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E0655"
+       },
+       "result": {
+        "employee_id": "E0655",
+        "name": "Jonas Weber",
+        "status": "closed",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2016-05-02",
+        "end_date": "2026-07-17",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 10.21,
+        "complete_years_of_service": 10,
+        "complete_months_of_service": 122
+       }
+      }
+     ]
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1099,
+     "completion_tokens": 37,
+     "latency_s": 0.544,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "notice period DE manager"
+       },
+       "result": {
+        "query": "notice period DE manager",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1443,
+     "completion_tokens": 38,
+     "latency_s": 0.611,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-DE-notice_period",
+        "jurisdiction": "DE",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1669,
+     "completion_tokens": 136,
+     "latency_s": 0.699,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ]
+  }
+ ]
+}

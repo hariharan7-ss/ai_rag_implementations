@@ -1,0 +1,2442 @@
+{
+ "rows": [
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1007 wants to resign. How much written notice is E1007 asked to give?",
+   "final": {
+    "employee_id": "E1007",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 710,
+   "completion_tokens": 32,
+   "total_tokens": 742,
+   "cost_usd": 6.285e-05,
+   "wall_s": 0.7649018000811338,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.7649018000811338,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 710,
+     "completion_tokens": 32,
+     "latency_s": 0.754,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1007"
+       },
+       "result": {
+        "employee_id": "E1007",
+        "name": "Sofia Alvarez",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2023-01-09",
+        "manager_id": "E1011",
+        "as_of": "2026-09-29",
+        "tenure_years": 3.72,
+        "complete_years_of_service": 3,
+        "complete_months_of_service": 44
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q01",
+   "class": "single_lookup",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1007 wants to resign. How much written notice is E1007 asked to give?",
+   "final": {
+    "employee_id": "E1007",
+    "status": "answered",
+    "value": 2.0,
+    "unit": "weeks",
+    "answer": "E1007 is asked to give at least 2 weeks written notice.",
+    "sources": [
+     "JUR-US-NY-notice_period",
+     "HB-08-1"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "search_handbook"
+   ],
+   "prompt_tokens": 4148,
+   "completion_tokens": 186,
+   "total_tokens": 4334,
+   "cost_usd": 0.00032798800000000003,
+   "wall_s": 2.4610463000135496,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.4610463000135496,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 710,
+     "completion_tokens": 32,
+     "latency_s": 0.553,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1007"
+       },
+       "result": {
+        "employee_id": "E1007",
+        "name": "Sofia Alvarez",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2023-01-09",
+        "manager_id": "E1011",
+        "as_of": "2026-09-29",
+        "tenure_years": 3.72,
+        "complete_years_of_service": 3,
+        "complete_months_of_service": 44
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 940,
+     "completion_tokens": 44,
+     "latency_s": 0.267,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-NY",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-US-NY-notice_period",
+        "jurisdiction": "US-NY",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "At-will employment: no statutory minimum notice for either party. The notice the company asks a resigning employee to give is set by the company-wide handbook (Offboarding and Termination Policy, Section 1). Final pay is due by the next regular payday."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1087,
+     "completion_tokens": 35,
+     "latency_s": 0.942,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "Offboarding and Termination Policy Section 1 notice"
+       },
+       "result": {
+        "query": "Offboarding and Termination Policy Section 1 notice",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         },
+         {
+          "section_id": "HB-09-1",
+          "policy": "Working Hours and Overtime Policy",
+          "section": "1. Standard Hours",
+          "effective": "January 1, 2025",
+          "text": "The standard work week is 40 hours. Exact daily schedules may vary by team as long as core hours (see Remote and Hybrid Work Policy, Section 4) are met."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1411,
+     "completion_tokens": 75,
+     "latency_s": 0.689,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q01",
+   "class": "single_lookup",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1009 is adopting a child. How many weeks of paid parental leave is E1009 entitled to?",
+   "final": {
+    "employee_id": "E1009",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 713,
+   "completion_tokens": 32,
+   "total_tokens": 745,
+   "cost_usd": 6.3075e-05,
+   "wall_s": 0.517187700024806,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.517187700024806,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.513,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1009"
+       },
+       "result": {
+        "employee_id": "E1009",
+        "name": "Grace Liu",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2024-04-01",
+        "manager_id": "E1011",
+        "parental": {
+         "parent_role": "non_birthing",
+         "event": "adoption",
+         "expected_leave_start": "2026-11-02"
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 2.49,
+        "complete_years_of_service": 2,
+        "complete_months_of_service": 29
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q02",
+   "class": "single_lookup",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1009 is adopting a child. How many weeks of paid parental leave is E1009 entitled to?",
+   "final": {
+    "employee_id": "E1009",
+    "status": "answered",
+    "value": 8.0,
+    "unit": "weeks",
+    "answer": "Grace Liu is entitled to 8 weeks of paid parental leave for adoption.",
+    "sources": [
+     "HB-07-2",
+     "JUR-US-CA-parental_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4425,
+   "completion_tokens": 208,
+   "total_tokens": 4633,
+   "cost_usd": 0.000355363,
+   "wall_s": 3.3084512999048457,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.3084512999048457,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.579,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1009"
+       },
+       "result": {
+        "employee_id": "E1009",
+        "name": "Grace Liu",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2024-04-01",
+        "manager_id": "E1011",
+        "parental": {
+         "parent_role": "non_birthing",
+         "event": "adoption",
+         "expected_leave_start": "2026-11-02"
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 2.49,
+        "complete_years_of_service": 2,
+        "complete_months_of_service": 29
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 976,
+     "completion_tokens": 37,
+     "latency_s": 0.847,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "parental leave adoption US-CA"
+       },
+       "result": {
+        "query": "parental leave adoption US-CA",
+        "sections": [
+         {
+          "section_id": "HB-07-2",
+          "policy": "Parental Leave Policy",
+          "section": "2. Leave Duration",
+          "effective": "January 1, 2025",
+          "text": "Birthing parents receive 16 weeks of paid parental leave. Non-birthing parents (including through adoption or foster placement) receive 8 weeks of paid parental leave. This leave is in addition to any short-term disability benefit that may apply to birth recovery."
+         },
+         {
+          "section_id": "HB-07-3",
+          "policy": "Parental Leave Policy",
+          "section": "3. Timing and Flexibility",
+          "effective": "January 1, 2025",
+          "text": "Parental leave must be taken within 12 months of the birth, adoption, or placement date. Leave can be taken continuously or split into two blocks of at least 2 weeks each, with manager and HR approval for split arrangements."
+         },
+         {
+          "section_id": "HB-07-1",
+          "policy": "Parental Leave Policy",
+          "section": "1. Eligibility",
+          "effective": "January 1, 2025",
+          "text": "All full-time employees are eligible for paid parental leave upon the birth, adoption, or foster placement of a child, regardless of tenure. Part-time employees working at least 20 hours per week are eligible on a pro-rated basis."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1309,
+     "completion_tokens": 46,
+     "latency_s": 0.972,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-CA",
+        "topic": "parental_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-CA-parental_leave",
+        "jurisdiction": "US-CA",
+        "topic": "parental_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "No local override on the paid weeks: the company-wide Parental Leave Policy and its latest Addendum apply."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1427,
+     "completion_tokens": 93,
+     "latency_s": 0.901,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q02",
+   "class": "single_lookup",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1013 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1013",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 727,
+   "completion_tokens": 32,
+   "total_tokens": 759,
+   "cost_usd": 6.4125e-05,
+   "wall_s": 0.34361650003120303,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.34361650003120303,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.335,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1013"
+       },
+       "result": {
+        "employee_id": "E1013",
+        "name": "Ravi Menon",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2020-06-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 6.29,
+        "complete_years_of_service": 6,
+        "complete_months_of_service": 75
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q03",
+   "class": "single_lookup",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1013 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1013",
+    "status": "answered",
+    "value": 6.0,
+    "unit": "days",
+    "answer": "Ravi Menon will forfeit 6 unused PTO days on December 31, 2026.",
+    "sources": [
+     "HB-01-2"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook"
+   ],
+   "prompt_tokens": 3145,
+   "completion_tokens": 186,
+   "total_tokens": 3331,
+   "cost_usd": 0.000272219,
+   "wall_s": 1.7745926999486983,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 1.7745926999486983,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.689,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1013"
+       },
+       "result": {
+        "employee_id": "E1013",
+        "name": "Ravi Menon",
+        "status": "active",
+        "jurisdiction": "US-NY",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2020-06-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 6.29,
+        "complete_years_of_service": 6,
+        "complete_months_of_service": 75
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 995,
+     "completion_tokens": 36,
+     "latency_s": 0.522,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "unused PTO carry over"
+       },
+       "result": {
+        "query": "unused PTO carry over",
+        "sections": [
+         {
+          "section_id": "HB-01-2",
+          "policy": "Leave and Time Off Policy",
+          "section": "2. Paid Time Off (PTO)",
+          "effective": "January 1, 2025",
+          "text": "Full-time employees accrue 18 days of PTO per calendar year, accrued monthly at a rate of 1.5 days per month. PTO accrual begins on an employee's start date. Employees may carry over a maximum of 5 unused PTO days into the following calendar year; any balance above 5 days is forfeited on December 31st unless local law requires otherwise. PTO requests must be submitted in the HR system at least 5 business days in advance for any absence longer than 2 consecutive days. Requests of 1-2 days may be submitted with 24 hours notice, subject to manager approval based on team coverage needs."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-08-3",
+          "policy": "Offboarding and Termination Policy",
+          "section": "3. Final Pay",
+          "effective": "January 1, 2025",
+          "text": "Final paycheck, including accrued and unused PTO (per the Leave and Time Off Policy), is issued according to state or local law, typically within the final pay cycle or immediately upon termination where required by law."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1423,
+     "completion_tokens": 118,
+     "latency_s": 0.559,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q03",
+   "class": "single_lookup",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1004's role. What is the minimum notice it must give E1004?",
+   "final": {
+    "employee_id": "E1004",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 713,
+   "completion_tokens": 32,
+   "total_tokens": 745,
+   "cost_usd": 4.3619e-05,
+   "wall_s": 0.5689524000044912,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.5689524000044912,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.565,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1004"
+       },
+       "result": {
+        "employee_id": "E1004",
+        "name": "Oliver Grant",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2025-02-10",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 1.63,
+        "complete_years_of_service": 1,
+        "complete_months_of_service": 19
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q04",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1004's role. What is the minimum notice it must give E1004?",
+   "final": {
+    "employee_id": "E1004",
+    "status": "answered",
+    "value": 1.0,
+    "unit": "weeks",
+    "answer": "The company must give Oliver Grant one week\u2019s notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 2781,
+   "completion_tokens": 135,
+   "total_tokens": 2916,
+   "cost_usd": 0.00024907499999999997,
+   "wall_s": 1.8095420999452472,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 1.8095420999452472,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.656,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1004"
+       },
+       "result": {
+        "employee_id": "E1004",
+        "name": "Oliver Grant",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2025-02-10",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 1.63,
+        "complete_years_of_service": 1,
+        "complete_months_of_service": 19
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 940,
+     "completion_tokens": 46,
+     "latency_s": 0.51,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1128,
+     "completion_tokens": 57,
+     "latency_s": 0.637,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q04",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1005's role. What is the minimum notice it must give E1005?",
+   "final": {
+    "employee_id": "E1005",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 713,
+   "completion_tokens": 32,
+   "total_tokens": 745,
+   "cost_usd": 6.3075e-05,
+   "wall_s": 0.6235117999603972,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.6235117999603972,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.618,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1005"
+       },
+       "result": {
+        "employee_id": "E1005",
+        "name": "Amelia Clarke",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2017-05-02",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 9.41,
+        "complete_years_of_service": 9,
+        "complete_months_of_service": 112
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q05",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1005's role. What is the minimum notice it must give E1005?",
+   "final": {
+    "employee_id": "E1005",
+    "status": "answered",
+    "value": 9.0,
+    "unit": "weeks",
+    "answer": "The company must give E1005 a minimum of 9 weeks\u2019 notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4393,
+   "completion_tokens": 225,
+   "total_tokens": 4618,
+   "cost_usd": 0.000328879,
+   "wall_s": 3.0206603000406176,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.0206603000406176,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 1.15,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1005"
+       },
+       "result": {
+        "employee_id": "E1005",
+        "name": "Amelia Clarke",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2017-05-02",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 9.41,
+        "complete_years_of_service": 9,
+        "complete_months_of_service": 112
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 936,
+     "completion_tokens": 42,
+     "latency_s": 0.46,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "notice period manager"
+       },
+       "result": {
+        "query": "notice period manager",
+        "sections": [
+         {
+          "section_id": "HB-08-1",
+          "policy": "Offboarding and Termination Policy",
+          "section": "1. Voluntary Resignation",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign are asked to provide at least 2 weeks written notice for individual contributor roles and 4 weeks for manager and above roles, submitted to their manager and People Operations. Notice periods are requested but not legally binding except where local employment law requires otherwise."
+         },
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-08-7",
+          "policy": "Offboarding and Termination Policy",
+          "section": "7. Rehire Eligibility",
+          "effective": "January 1, 2025",
+          "text": "Employees who resign in good standing with proper notice are generally eligible for rehire. Employees terminated for cause are marked \"not eligible for rehire\" in the HR system."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1278,
+     "completion_tokens": 38,
+     "latency_s": 0.5,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1466,
+     "completion_tokens": 113,
+     "latency_s": 0.906,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q05",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1006's employment. What is the minimum notice it must give E1006?",
+   "final": {
+    "employee_id": "E1006",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 714,
+   "completion_tokens": 32,
+   "total_tokens": 746,
+   "cost_usd": 6.315e-05,
+   "wall_s": 0.6601324999937788,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.6601324999937788,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.656,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1006"
+       },
+       "result": {
+        "employee_id": "E1006",
+        "name": "Lukas Braun",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-07-01",
+        "manager_id": "E1003",
+        "as_of": "2026-09-29",
+        "tenure_years": 0.25,
+        "complete_years_of_service": 0,
+        "complete_months_of_service": 2
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q06",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1006's employment. What is the minimum notice it must give E1006?",
+   "final": {
+    "employee_id": "E1006",
+    "status": "answered",
+    "value": 2.0,
+    "unit": "weeks",
+    "answer": "The company must give E1006 a minimum of 2 weeks\u2019 notice.",
+    "sources": [
+     "JUR-DE-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 4,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 2824,
+   "completion_tokens": 150,
+   "total_tokens": 2974,
+   "cost_usd": 0.000237344,
+   "wall_s": 2.556722200009972,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.556722200009972,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.604,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1006"
+       },
+       "result": {
+        "employee_id": "E1006",
+        "name": "Lukas Braun",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-07-01",
+        "manager_id": "E1003",
+        "as_of": "2026-09-29",
+        "tenure_years": 0.25,
+        "complete_years_of_service": 0,
+        "complete_months_of_service": 2
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 942,
+     "completion_tokens": 42,
+     "latency_s": 1.398,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-DE-notice_period",
+        "jurisdiction": "DE",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1168,
+     "completion_tokens": 76,
+     "latency_s": 0.549,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q06",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1002 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1002",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 727,
+   "completion_tokens": 32,
+   "total_tokens": 759,
+   "cost_usd": 4.4669e-05,
+   "wall_s": 0.9271564000518993,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.9271564000518993,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 0.923,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1002"
+       },
+       "result": {
+        "employee_id": "E1002",
+        "name": "Marcus Webb",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2021-03-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 5.54,
+        "complete_years_of_service": 5,
+        "complete_months_of_service": 66
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q07",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "E1002 expects to finish 2026 with the unused PTO shown in their record. How many of those days will be forfeited on December 31, 2026?",
+   "final": {
+    "employee_id": "E1002",
+    "status": "answered",
+    "value": 0.0,
+    "unit": "days",
+    "answer": "Marcus Webb will not forfeit any PTO days on December 31, 2026.",
+    "sources": [
+     "HB-01-2",
+     "JUR-US-CA-annual_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 4752,
+   "completion_tokens": 282,
+   "total_tokens": 5034,
+   "cost_usd": 0.000441,
+   "wall_s": 3.916238399920985,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 3.916238399920985,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 727,
+     "completion_tokens": 32,
+     "latency_s": 2.406,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1002"
+       },
+       "result": {
+        "employee_id": "E1002",
+        "name": "Marcus Webb",
+        "status": "active",
+        "jurisdiction": "US-CA",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2021-03-15",
+        "manager_id": "E1011",
+        "pto": {
+         "carried_over_from_2025": 5,
+         "used_2026": 12,
+         "projected_unused_end_of_2026": 11
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": 5.54,
+        "complete_years_of_service": 5,
+        "complete_months_of_service": 66
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 993,
+     "completion_tokens": 39,
+     "latency_s": 0.389,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "carry over PTO US-CA"
+       },
+       "result": {
+        "query": "carry over PTO US-CA",
+        "sections": [
+         {
+          "section_id": "HB-01-3",
+          "policy": "Leave and Time Off Policy",
+          "section": "3. Sick Leave",
+          "effective": "January 1, 2025",
+          "text": "Employees receive 10 paid sick days per calendar year, separate from PTO. Sick leave does not carry over year to year and does not need advance notice, but employees should notify their manager before their normal start time on the day of absence. For absences of 3 or more consecutive sick days, a doctor's note may be requested by HR."
+         },
+         {
+          "section_id": "HB-01-2",
+          "policy": "Leave and Time Off Policy",
+          "section": "2. Paid Time Off (PTO)",
+          "effective": "January 1, 2025",
+          "text": "Full-time employees accrue 18 days of PTO per calendar year, accrued monthly at a rate of 1.5 days per month. PTO accrual begins on an employee's start date. Employees may carry over a maximum of 5 unused PTO days into the following calendar year; any balance above 5 days is forfeited on December 31st unless local law requires otherwise. PTO requests must be submitted in the HR system at least 5 business days in advance for any absence longer than 2 consecutive days. Requests of 1-2 days may be submitted with 24 hours notice, subject to manager approval based on team coverage needs."
+         },
+         {
+          "section_id": "HB-08-4",
+          "policy": "Offboarding and Termination Policy",
+          "section": "4. Benefits Continuation",
+          "effective": "January 1, 2025",
+          "text": "Health benefits end on the last day of the month in which employment ends. Employees may be eligible to continue coverage through COBRA (US) or equivalent local programs at their own cost. Information is provided by People Operations within 14 days of the termination date."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1437,
+     "completion_tokens": 101,
+     "latency_s": 0.717,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "US-CA",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-US-CA-annual_leave",
+        "jurisdiction": "US-CA",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "The company-wide 18 days of PTO apply, but forfeiture is prohibited: the company-wide rule that forfeits unused PTO above 5 days on December 31 does not apply in California. All unused PTO carries over, subject to an accrual cap of 27 days (1.5x the annual entitlement)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1595,
+     "completion_tokens": 110,
+     "latency_s": 0.399,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q07",
+   "class": "param_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1012's role. What is the minimum notice it must give E1012?",
+   "final": {
+    "employee_id": "E1012",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 713,
+   "completion_tokens": 32,
+   "total_tokens": 745,
+   "cost_usd": 6.3075e-05,
+   "wall_s": 0.6349027000833303,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.6349027000833303,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.631,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1012"
+       },
+       "result": {
+        "employee_id": "E1012",
+        "name": "Chloe Bennett",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-03-02",
+        "manager_id": "E1005",
+        "service_continuity": {
+         "prior_employee_id": "E0877",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0877's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q08",
+   "class": "path_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company is eliminating E1012's role. What is the minimum notice it must give E1012?",
+   "final": {
+    "employee_id": "E1012",
+    "status": "answered",
+    "value": 7.0,
+    "unit": "weeks",
+    "answer": "The company must give Chloe Bennett a minimum of 7 weeks\u2019 notice.",
+    "sources": [
+     "JUR-UK-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "get_employee_record"
+   ],
+   "prompt_tokens": 4338,
+   "completion_tokens": 266,
+   "total_tokens": 4604,
+   "cost_usd": 0.00040514999999999995,
+   "wall_s": 2.2904285000404343,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.2904285000404343,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 713,
+     "completion_tokens": 32,
+     "latency_s": 0.394,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1012"
+       },
+       "result": {
+        "employee_id": "E1012",
+        "name": "Chloe Bennett",
+        "status": "active",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-03-02",
+        "manager_id": "E1005",
+        "service_continuity": {
+         "prior_employee_id": "E0877",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0877's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1030,
+     "completion_tokens": 51,
+     "latency_s": 0.568,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-UK-notice_period",
+        "jurisdiction": "UK",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Minimum notice the company must give when it ends employment (any reason other than gross misconduct), by complete years of continuous service: under 1 month - none; 1 month up to 2 years - 1 week; 2 to 11 complete years - 1 week per complete year of service; 12 or more years - 12 weeks. Notice an employee must give when resigning is set by the company-wide handbook (Offboarding and Termination Policy, Section 1)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1218,
+     "completion_tokens": 70,
+     "latency_s": 0.567,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E0877"
+       },
+       "result": {
+        "employee_id": "E0877",
+        "name": "Chloe Bennett",
+        "status": "closed",
+        "jurisdiction": "UK",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2018-04-03",
+        "end_date": "2026-02-13",
+        "manager_id": "E1005",
+        "as_of": "2026-09-29",
+        "tenure_years": 7.87,
+        "complete_years_of_service": 7,
+        "complete_months_of_service": 94
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1377,
+     "completion_tokens": 113,
+     "latency_s": 0.754,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q08",
+   "class": "path_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "How many days of PTO is E1008 entitled to for calendar year 2026?",
+   "final": {
+    "employee_id": "E1008",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 709,
+   "completion_tokens": 32,
+   "total_tokens": 741,
+   "cost_usd": 6.2775e-05,
+   "wall_s": 0.6283967999042943,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.6283967999042943,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 709,
+     "completion_tokens": 32,
+     "latency_s": 0.626,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1008"
+       },
+       "result": {
+        "employee_id": "E1008",
+        "name": "Daniel Okafor",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2022-09-12",
+        "manager_id": "E1003",
+        "transfer_history": [
+         {
+          "from_jurisdiction": "UK",
+          "to_jurisdiction": "DE",
+          "effective_date": "2026-07-01"
+         }
+        ],
+        "as_of": "2026-09-29",
+        "tenure_years": 4.05,
+        "complete_years_of_service": 4,
+        "complete_months_of_service": 48
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q09",
+   "class": "path_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "How many days of PTO is E1008 entitled to for calendar year 2026?",
+   "final": {
+    "employee_id": "E1008",
+    "status": "answered",
+    "value": 27.5,
+    "unit": "days",
+    "answer": "E1008 is entitled to 27.5 days of PTO for calendar year 2026.",
+    "sources": [
+     "JUR-DE-annual_leave",
+     "JUR-UK-annual_leave"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 6,
+   "tool_calls": [
+    "get_employee_record",
+    "search_handbook",
+    "get_jurisdiction_rules",
+    "get_jurisdiction_rules"
+   ],
+   "prompt_tokens": 5973,
+   "completion_tokens": 384,
+   "total_tokens": 6357,
+   "cost_usd": 0.000504807,
+   "wall_s": 2.91809709998779,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.91809709998779,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 709,
+     "completion_tokens": 32,
+     "latency_s": 0.623,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1008"
+       },
+       "result": {
+        "employee_id": "E1008",
+        "name": "Daniel Okafor",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "individual_contributor",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2022-09-12",
+        "manager_id": "E1003",
+        "transfer_history": [
+         {
+          "from_jurisdiction": "UK",
+          "to_jurisdiction": "DE",
+          "effective_date": "2026-07-01"
+         }
+        ],
+        "as_of": "2026-09-29",
+        "tenure_years": 4.05,
+        "complete_years_of_service": 4,
+        "complete_months_of_service": 48
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 973,
+     "completion_tokens": 32,
+     "latency_s": 0.544,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "search_handbook",
+       "args": {
+        "query": "annual_leave"
+       },
+       "result": {
+        "query": "annual_leave",
+        "sections": [
+         {
+          "section_id": "HB-05-5",
+          "policy": "Benefits Overview",
+          "section": "5. Learning and Development",
+          "effective": "January 1, 2025",
+          "text": "Each employee has an annual learning budget of 1,000 USD for courses, books, conferences, or certifications relevant to their role, subject to manager approval."
+         },
+         {
+          "section_id": "HB-07-4",
+          "policy": "Parental Leave Policy",
+          "section": "4. Pay and Benefits During Leave",
+          "effective": "January 1, 2025",
+          "text": "Parental leave is paid at 100% of base salary. Health benefits continue uninterrupted during parental leave with no change to employee contribution amounts. PTO and sick leave do not accrue during weeks of unpaid leave but do continue to accrue during paid parental leave weeks."
+         },
+         {
+          "section_id": "HB-06-7",
+          "policy": "Performance Review Process",
+          "section": "7. Promotions",
+          "effective": "January 1, 2025",
+          "text": "Promotions are considered during the annual review cycle by default, but may be processed off-cycle with VP approval for exceptional circumstances (e.g., retention risk, significant scope change)."
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1268,
+     "completion_tokens": 50,
+     "latency_s": 0.428,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-DE-annual_leave",
+        "jurisdiction": "DE",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "German employees receive 30 days of PTO per calendar year (replaces the company-wide 18 days). Unused days carry over until March 31 of the next year, then lapse. Transfers into Germany: in the calendar year an employee transfers in from another Solstice jurisdiction, that year's entitlement is pro-rated by full calendar months - months before the transfer at the previous jurisdiction's annual PTO figure, months from the transfer date at 30 days."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1446,
+     "completion_tokens": 74,
+     "latency_s": 0.309,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "UK",
+        "topic": "annual_leave"
+       },
+       "result": {
+        "rule_id": "JUR-UK-annual_leave",
+        "jurisdiction": "UK",
+        "topic": "annual_leave",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "UK employees receive 25 days of PTO per calendar year (replaces the company-wide 18 days), accrued monthly, plus UK bank holidays. Carry-over follows the company-wide handbook (maximum 5 days)."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 6,
+     "prompt_tokens": 1577,
+     "completion_tokens": 196,
+     "latency_s": 1.007,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q09",
+   "class": "path_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1015's employment. What is the minimum notice it must give E1015?",
+   "final": {
+    "employee_id": "E1015",
+    "status": "cannot_answer",
+    "value": null,
+    "unit": null,
+    "answer": "Stopped by the max_iters budget before an answer was reached.",
+    "sources": []
+   },
+   "stopped_by": "max_iters",
+   "stop_detail": "8 laps done, limit 8",
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 8,
+   "tool_calls": [
+    "get_employee_record"
+   ],
+   "prompt_tokens": 714,
+   "completion_tokens": 32,
+   "total_tokens": 746,
+   "cost_usd": 4.3694e-05,
+   "wall_s": 0.473272200091742,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 0.473272200091742,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.469,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1015"
+       },
+       "result": {
+        "employee_id": "E1015",
+        "name": "Jonas Weber",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-08-03",
+        "manager_id": null,
+        "service_continuity": {
+         "prior_employee_id": "E0655",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0655's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 4,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 5,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 6,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 7,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 8,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    }
+   ],
+   "id": "q10",
+   "class": "path_branch",
+   "trial": 1,
+   "arm": "without_feedback"
+  },
+  {
+   "system": "agent",
+   "prompt_version": "hr-agent-v1",
+   "model": "openai/gpt-oss-20b",
+   "question": "The company wants to end E1015's employment. What is the minimum notice it must give E1015?",
+   "final": {
+    "employee_id": "E1015",
+    "status": "answered",
+    "value": 4.0,
+    "unit": "weeks",
+    "answer": "The minimum notice the company must give E1015 is four weeks.",
+    "sources": [
+     "JUR-DE-notice_period"
+    ]
+   },
+   "stopped_by": null,
+   "stop_detail": null,
+   "budgets": {
+    "max_iters": 8,
+    "max_tokens": 20000,
+    "max_cost_usd": 0.003,
+    "max_wall_s": 90.0
+   },
+   "llm_calls": 5,
+   "tool_calls": [
+    "get_employee_record",
+    "get_jurisdiction_rules",
+    "get_employee_record"
+   ],
+   "prompt_tokens": 4398,
+   "completion_tokens": 312,
+   "total_tokens": 4710,
+   "cost_usd": 0.00042344999999999997,
+   "wall_s": 2.1366152999689803,
+   "rate_limit_wait_s": 0.0,
+   "latency_s": 2.1366152999689803,
+   "steps": [
+    {
+     "lap": 1,
+     "prompt_tokens": 714,
+     "completion_tokens": 32,
+     "latency_s": 0.567,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E1015"
+       },
+       "result": {
+        "employee_id": "E1015",
+        "name": "Jonas Weber",
+        "status": "active",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2026-08-03",
+        "manager_id": null,
+        "service_continuity": {
+         "prior_employee_id": "E0655",
+         "counts_toward_tenure": true,
+         "note": "Rehired after a 2-week gap. For every tenure-based entitlement, count continuous service from the prior record's start_date to today; the gap is disregarded."
+        },
+        "as_of": "2026-09-29",
+        "tenure_years": null,
+        "complete_years_of_service": null,
+        "complete_months_of_service": null,
+        "tenure_note": "Not computable from this record: continuous service starts at prior record E0655's start_date."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 2,
+     "error": "Error code: 400 - Tool call validation failed: attempted to call tool 'search_handbook<|channel|>commentary' which was not in request.tools"
+    },
+    {
+     "lap": 3,
+     "prompt_tokens": 1026,
+     "completion_tokens": 39,
+     "latency_s": 0.27,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_jurisdiction_rules",
+       "args": {
+        "jurisdiction": "DE",
+        "topic": "notice_period"
+       },
+       "result": {
+        "rule_id": "JUR-DE-notice_period",
+        "jurisdiction": "DE",
+        "topic": "notice_period",
+        "document": "Local Jurisdiction Supplement",
+        "effective": "January 1, 2026",
+        "rule": "Probation is the first 6 months of employment; during probation either party may end employment with 2 weeks notice. Probation does not apply where the employee record shows prior service counting toward tenure. After probation: 4 weeks to the 15th or to the end of a calendar month. Notice the company must give extends with complete years of continuous service: 2 years - 1 month; 5 years - 2 months; 8 years - 3 months; 10 years - 4 months; 12 years - 5 months; 15 years - 6 months; 20 years - 7 months, each to the end of a calendar month."
+       }
+      }
+     ]
+    },
+    {
+     "lap": 4,
+     "prompt_tokens": 1252,
+     "completion_tokens": 67,
+     "latency_s": 0.65,
+     "finish_reason": "tool_calls",
+     "tool_calls": [
+      {
+       "name": "get_employee_record",
+       "args": {
+        "employee_id": "E0655"
+       },
+       "result": {
+        "employee_id": "E0655",
+        "name": "Jonas Weber",
+        "status": "closed",
+        "jurisdiction": "DE",
+        "role_level": "manager",
+        "employment_type": "full_time",
+        "weekly_hours": 40,
+        "start_date": "2016-05-02",
+        "end_date": "2026-07-17",
+        "manager_id": null,
+        "as_of": "2026-09-29",
+        "tenure_years": 10.21,
+        "complete_years_of_service": 10,
+        "complete_months_of_service": 122
+       }
+      }
+     ]
+    },
+    {
+     "lap": 5,
+     "prompt_tokens": 1406,
+     "completion_tokens": 174,
+     "latency_s": 0.643,
+     "finish_reason": "stop",
+     "tool_calls": []
+    }
+   ],
+   "id": "q10",
+   "class": "path_branch",
+   "trial": 1,
+   "arm": "with_feedback"
+  }
+ ]
+}

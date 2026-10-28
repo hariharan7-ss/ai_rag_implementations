@@ -53,7 +53,8 @@ def _short(obj: Any, n: int = 160) -> str:
 
 
 def run_agent(question: str, budgets: Optional[Budgets] = None, log: Callable[[str], None] = print,
-              chat_fn=chat) -> Dict[str, Any]:
+              chat_fn=chat, feedback_on_reject: bool = True) -> Dict[str, Any]:
+    # feedback_on_reject=False restores the Week 7 behaviour; it exists only so eval/week8/fault_injection.py can A/B the mitigation.
     b = budgets or Budgets()
     t0 = time.monotonic()
     deadline = t0 + b.max_wall_s
@@ -107,9 +108,18 @@ def run_agent(question: str, budgets: Optional[Budgets] = None, log: Callable[[s
             break
         except groq.BadRequestError as e:
             laps += 1
-            # Groq rejects a malformed tool call (tool_use_failed); the lap is spent, try again.
+            # Groq rejects a malformed tool call (tool_use_failed); the lap is spent.
             log(f"[agent {el()}] lap {laps}: model produced an invalid tool call ({_short(str(e), 120)}) - retrying")
             steps.append({"lap": laps, "error": str(e)[:300]})
+            # Week 8 mitigation (re-planning), the one change raced before->after: feed the
+            # rejection back so the retry differs. Week 7 re-sent the identical request, and the
+            # identical rejection came back up to 6 times until max_iters fired (q02).
+            feedback = (f"Your last tool call was rejected before any tool ran: {_short(str(e), 200)}. "
+                        f"Re-issue it calling exactly one tool from the list, with the tool name "
+                        f"exactly as listed and nothing appended to it - or give the final JSON answer.")
+            if feedback_on_reject:
+                messages.append({"role": "user", "content": feedback})
+                next_prompt += len(feedback) // 3
             continue
 
         laps += 1

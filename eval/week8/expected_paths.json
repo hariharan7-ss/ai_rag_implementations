@@ -1,0 +1,81 @@
+{
+  "_doc": [
+    "Expected tool trajectories for the 10 Week-7 questions, asserted by eval/week8/trajectory_eval.py.",
+    "Tokens: 'R:<employee_id>' = get_employee_record, 'J:<jurisdiction>:<topic>' = get_jurisdiction_rules, 'H' = search_handbook.",
+    "Each case lists EVERY acceptable core path as {core, h_min}. A run matches a path when its",
+    "non-H calls equal `core` in order and it made at least `h_min` handbook searches.",
+    "search_handbook POSITION is never asserted: reading the handbook before or after the",
+    "jurisdiction rule are both correct, and asserting one order would score correct runs as",
+    "failures. Extra H calls are tolerated by the matcher too (H is read-only over one corpus);",
+    "they are charged to step efficiency instead. Any unexpected R or J call fails the match.",
+    "steps_needed = min over paths of len(core) + h_min."
+  ],
+  "cases": {
+    "q01": {
+      "paths": [
+        {"core": ["R:E1007"], "h_min": 1},
+        {"core": ["R:E1007", "J:US-NY:notice_period"], "h_min": 1}
+      ],
+      "alt": "2 paths. The 2-week figure exists only in HB-08-1, so H is required; checking the US-NY override first (it defers to the handbook) is a legitimate detour, not a wrong path."
+    },
+    "q02": {
+      "paths": [
+        {"core": ["R:E1009"], "h_min": 1},
+        {"core": ["R:E1009", "J:US-CA:parental_leave"], "h_min": 1}
+      ],
+      "alt": "2 paths. The 10-week figure exists only in the handbook addendum (HB-10-1), so H is required; the US-CA parental rule only says 'company-wide applies', reading it is legitimate."
+    },
+    "q03": {
+      "paths": [
+        {"core": ["R:E1013"], "h_min": 1},
+        {"core": ["R:E1013", "J:US-NY:annual_leave"], "h_min": 0}
+      ],
+      "alt": "2 paths. The 5-day carry-over cap is stated in BOTH HB-01-2 and the US-NY rule, so record+handbook and record+rule are each sufficient (mirrors the q03 any-of citation in the outcome eval)."
+    },
+    "q04": {
+      "paths": [
+        {"core": ["R:E1004", "J:UK:notice_period"], "h_min": 0}
+      ],
+      "alt": "1 path. Statutory notice by tenure lives only in the UK rule; the record must be read first (jurisdiction AND tenure band come from it). H optional."
+    },
+    "q05": {
+      "paths": [
+        {"core": ["R:E1005", "J:UK:notice_period"], "h_min": 0}
+      ],
+      "alt": "1 path. Same as q04, different tenure band - the record read is what proves the 9-week answer wasn't a guess."
+    },
+    "q06": {
+      "paths": [
+        {"core": ["R:E1006", "J:DE:notice_period"], "h_min": 0}
+      ],
+      "alt": "1 path. DE probation band: the record's 2 months of service is the branching fact."
+    },
+    "q07": {
+      "paths": [
+        {"core": ["R:E1002", "J:US-CA:annual_leave"], "h_min": 0}
+      ],
+      "alt": "1 path. The US-CA no-forfeiture rule decides it; the record supplies the PTO balance."
+    },
+    "q08": {
+      "paths": [
+        {"core": ["R:E1012", "R:E0877", "J:UK:notice_period"], "h_min": 0},
+        {"core": ["R:E1012", "J:UK:notice_period", "R:E0877"], "h_min": 0}
+      ],
+      "alt": "2 paths. The prior record and the UK rule can be fetched in either order; R:E1012 must come first (E0877 is only discoverable from it). A run that never fetches E0877 cannot know the 8 years."
+    },
+    "q09": {
+      "paths": [
+        {"core": ["R:E1008", "J:DE:annual_leave", "J:UK:annual_leave"], "h_min": 0},
+        {"core": ["R:E1008", "J:UK:annual_leave", "J:DE:annual_leave"], "h_min": 0}
+      ],
+      "alt": "2 paths. Both jurisdictions' PTO figures are needed for the pro-rating; either order after the record. A run with only J:DE is the 24-day wrong answer's wrong path."
+    },
+    "q10": {
+      "paths": [
+        {"core": ["R:E1015", "R:E0655", "J:DE:notice_period"], "h_min": 0},
+        {"core": ["R:E1015", "J:DE:notice_period", "R:E0655"], "h_min": 0}
+      ],
+      "alt": "2 paths. Like q08: prior record E0655 and the DE rule in either order after R:E1015."
+    }
+  }
+}
